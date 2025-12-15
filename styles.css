@@ -2,27 +2,27 @@
    CSS VARIABLES & RESET
    ========================================== */
 :root {
-  /* Romantic Color Palette */
-  --bg: #000000;                    /* Pure black background */
-  --panel: #1a1a1a;                 /* Dark charcoal panels */
-  --card: #141414;                  /* Slightly lighter black cards */
-  --text: #ffffff;                  /* Pure white text */
-  --muted: #a0a0a0;                 /* Soft gray muted text */
-  --accent: #ff6b9d;                /* Romantic pink */
-  --accent-2: #c44569;              /* Deep rose */
-  --warn: #f8b500;                  /* Warm gold */
-  --danger: #ff4757;                /* Soft red */
-  
-  /* Additional Romantic Colors */
-  --purple: #8e44ad;                /* Deep purple */
-  --lavender: #a569bd;              /* Lavender accent */
-  --rose: #e74c3c;                  /* Rose red */
-  --coral: #ff7675;                 /* Coral pink */
-  
+  /* Pastel Cute Palette */
+  --bg: #fff8fb;                    /* Soft blush background */
+  --panel: #fff1f5;                 /* Pale panel */
+  --card: #ffffff;                  /* Card white */
+  --text: #2b2b2b;                  /* Dark slate text */
+  --muted: #8a7b82;                 /* Muted mauve */
+  --accent: #ff92b2;                /* Light pink accent */
+  --accent-2: #ff6b9d;              /* Warm rose */
+  --warn: #f7c948;                  /* Warm gold */
+  --danger: #ff6b6b;                /* Soft red */
+
+  /* Additional Pastels */
+  --purple: #b48bdc;                /* Soft purple */
+  --lavender: #d3b3e6;              /* Lavender accent */
+  --rose: #ff9fb1;                  /* Rose */
+  --coral: #ffd1d9;                 /* Coral blush */
+
   /* Visual Effects */
-  --shadow: 0 15px 35px rgba(255, 107, 157, 0.1);
+  --shadow: 0 12px 30px rgba(180, 120, 160, 0.08);
   --radius: 16px;
-  --transition: all 0.3s ease;
+  --transition: all 0.28s cubic-bezier(.2,.9,.3,1);
 }
 
 /* ==========================================
@@ -35,15 +35,14 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 body {
   background: 
-    radial-gradient(1200px 800px at 15% -5%, rgba(255, 107, 157, 0.08), transparent),
-    radial-gradient(1000px 600px at 85% 15%, rgba(196, 69, 105, 0.06), transparent),
-    radial-gradient(800px 400px at 50% 100%, rgba(142, 68, 173, 0.05), transparent),
-              var(--bg);
+    radial-gradient(800px 500px at 10% -5%, rgba(255,146,178,0.12), transparent),
+    radial-gradient(700px 420px at 90% 10%, rgba(180,140,200,0.08), transparent),
+    var(--bg);
   color: var(--text);
   line-height: 1.5;
   min-height: 100vh;
@@ -86,8 +85,15 @@ header {
   border-bottom: 1px solid #1f2937;
 }
 
+/* Position header relatively so the title can be centered absolutely */
+header {
+  position: relative;
+  padding-top: 18px;
+}
+
 .header-content {
   flex: 1;
+  text-align: center;
 }
 
 .header-actions {
@@ -103,16 +109,42 @@ header {
 }
 
 .title {
-  font-size: clamp(22px, 2.2vw + 10px, 34px);
+  font-size: clamp(24px, 2.2vw + 12px, 40px);
   font-weight: 800;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* Center the title across the header area */
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  white-space: nowrap;
+}
+
+.title-script {
+  font-family: Sacramento, cursive;
+  font-weight: 400;
+  font-size: 1.05em;
+  margin-left: 6px;
+  color: var(--accent-2);
+  transform: translateY(2px);
 }
 
 .subtitle {
   color: var(--muted);
   font-weight: 500;
   margin-bottom: 8px;
+}
+
+/* Ensure subtitle sits below the centered title and stays centered */
+.subtitle {
+  text-align: center;
+  margin-top: 64px;
 }
 
 .help-text {
@@ -129,11 +161,11 @@ header {
    CARD COMPONENTS
    ========================================== */
 .card {
-  background: linear-gradient(135deg, #141414 0%, #1a1a1a 50%, #141414 100%);
-  border: 1px solid rgba(255, 107, 157, 0.2);
-  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--card) 0%, #fff 100%);
+  border: 1px solid rgba(255, 146, 178, 0.35);
+  border-radius: calc(var(--radius) + 4px);
   box-shadow: var(--shadow);
-  padding: 24px;
+  padding: 22px;
   position: relative;
   overflow: hidden;
 }
@@ -280,11 +312,11 @@ input:hover, select:hover, textarea:hover {
    ========================================== */
 button {
   appearance: none;
-  border: 1px solid rgba(255, 107, 157, 0.4);
-  background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%);
+  border: 1px solid rgba(255, 146, 178, 0.6);
+  background: linear-gradient(135deg, #fff 0%, #fff 100%);
   color: var(--text);
-  padding: 12px 16px;
-  border-radius: 12px;
+  padding: 10px 16px;
+  border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
@@ -296,9 +328,9 @@ button {
 }
 
 button:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  transform: translateY(-3px) scale(1.01);
+  border-color: var(--accent-2);
+  box-shadow: 0 8px 26px rgba(200,120,160,0.12);
 }
 
 button:active {
@@ -307,8 +339,8 @@ button:active {
 
 /* Button Variants */
 .primary {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-  border-color: var(--accent);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  border-color: transparent;
   color: white;
 }
 
@@ -341,7 +373,15 @@ button:active {
 
 .ghost {
   background: transparent;
-  border-color: rgba(255, 107, 157, 0.3);
+  border-color: rgba(200,120,160,0.12);
+}
+
+/* Make the reset button clearly visible with a vivid pink */
+#resetBtn {
+  background: linear-gradient(90deg, #ff6b9d 0%, #ff5fa8 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 22px rgba(255,95,160,0.14);
 }
 
 .ghost:hover {
@@ -387,12 +427,12 @@ button:active {
   justify-content: center;
   text-align: center;
   min-height: 280px;
-  border: 2px dashed rgba(255, 107, 157, 0.4);
-  border-radius: 16px;
-  padding: 40px 24px 24px 24px;
+  border: 1px dashed rgba(255, 146, 178, 0.45);
+  border-radius: 20px;
+  padding: 36px 20px 20px 20px;
   margin-top: 8px;
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 107, 157, 0.08) 0%, rgba(196, 69, 105, 0.05) 100%);
+  background: linear-gradient(180deg, rgba(255,246,249,0.8) 0%, rgba(255,237,242,0.6) 100%);
 }
 
 .today-content {
@@ -440,11 +480,45 @@ button:active {
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 0.5px;
-  color: var(--accent);
-  background: rgba(255, 107, 157, 0.15);
-  padding: 12px 20px;
+  color: var(--accent-2);
+  background: linear-gradient(90deg, rgba(255,146,178,0.12), rgba(255,209,221,0.08));
+  padding: 10px 18px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 107, 157, 0.3);
+  border: 1px solid rgba(255,146,178,0.28);
+}
+
+/* New time panel styles */
+.time-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.local-time {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--accent-2);
+  background: linear-gradient(90deg, rgba(255,146,178,0.14), rgba(255,209,221,0.06));
+  padding: 8px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(200,120,160,0.06);
+}
+.reveal-pill {
+  font-size: 13px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.6);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,146,178,0.14);
+}
+.time-panel .reveal-pill {
+  transition: transform 260ms ease, background 260ms ease, color 260ms ease;
+}
+.time-panel.revealed .reveal-pill {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: #fff;
 }
 
 .message-display {
@@ -470,7 +544,7 @@ button:active {
   line-height: 1.35;
   white-space: pre-wrap;
   color: var(--text);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .tz-badge {
@@ -478,13 +552,13 @@ button:active {
   top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(26, 26, 26, 0.8);
-  border: 1px solid rgba(255, 107, 157, 0.3);
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,146,178,0.18);
   padding: 6px 12px;
   border-radius: 999px;
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 600;
+  color: var(--accent-2);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 /* ==========================================
@@ -644,6 +718,50 @@ tr:hover td {
   }
 }
 
+/* Floating hearts animation (reveals) */
+.hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+.heart {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  will-change: transform, opacity;
+  transform-origin: center;
+}
+.heart svg { width:100%; height:100%; display:block; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.7) rotate(0deg); opacity: 1; }
+  30% { transform: translateY(-40px) scale(1.05) rotate(-8deg); }
+  100% { transform: translateY(-220px) scale(1.15) rotate(-18deg); opacity: 0; }
+}
+
+/* Micro animation for inline SVG icons */
+.icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline-block;
+  transition: transform 180ms ease, opacity 180ms ease;
+  fill: currentColor;
+}
+.icon:hover { transform: translateY(-3px) scale(1.08); }
+
+/* small pop effect for revealed note */
+.note.revealed-pop {
+  animation: popIn 420ms cubic-bezier(.2,.9,.3,1);
+}
+@keyframes popIn {
+  0% { transform: scale(.96); opacity: 0; }
+  60% { transform: scale(1.03); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
 /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
@@ -697,6 +815,17 @@ tr:hover td {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
+  }
+
+  /* Mobile: revert title to normal flow so it doesn't overlap other elements */
+  .title {
+    position: static;
+    transform: none;
+    top: auto;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    margin-top: 12px;
   }
   
   .action-group {

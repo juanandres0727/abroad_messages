@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Programador de Sorpresas</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Sacramento&display=swap" rel="stylesheet">
   <!-- Luxon for robust timezone handling -->
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
 </head>
@@ -12,14 +13,17 @@
   <div class="container">
     <header>
       <div>
-        <div class="title">💌 Sorpresas para ella</div>
+        <div class="title">💌 <span class="title-script">Sorpresas para ella</span></div>
         <div class="subtitle">Escribe notas dulces con anticipación → se revelarán en los días seleccionados en <span id="subTZ">su zona horaria</span>. Funciona completamente sin conexión.</div>
       </div>
       <div class="btns">
         <button class="ghost pill" id="exportBtn">Exportar JSON</button>
         <input type="file" id="importInput" accept="application/json" hidden>
         <button class="ghost pill" id="importBtn">Importar</button>
-        <button class="ghost pill danger" id="clearBtn" title="Eliminar todos los datos">Restablecer</button>
+        <button class="ghost pill danger" id="clearBtn" title="Eliminar todos los datos">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm3 3h12l-1 11H7L6 9zM9 4h6l1 2H8l1-2z"/></svg>
+          Restablecer
+        </button>
       </div>
     </header>
 
@@ -109,6 +113,7 @@ I’m proud of you—keep going."></textarea>
             <button class="ghost" id="copyBtn">Copiar nota</button>
           </div>
           <div class="confetti" id="confetti"></div>
+          <div class="hearts" id="hearts" aria-hidden="true"></div>
         </div>
         <div class="footer">Si la página no estaba abierta en el momento exacto, se revelará la próxima vez que la abras después de esa hora.</div>
       </section>
@@ -317,7 +322,7 @@ You make hard days softer.`;
         entry.revealed = true; entry.revealedAt = now.toISO();
         persist(s);
         showToday(entry, s);
-        fireConfetti();
+        fireConfetti(); fireHearts();
         return true;
       }
       if(entry && entry.revealed){ showToday(entry, s); return true; }
@@ -350,7 +355,7 @@ You make hard days softer.`;
       entry.revealed = true; entry.revealedAt = now.toISO();
       persist(s);
       renderSchedule(s.settings, s.notes, s.schedule);
-      showToday(entry, s); fireConfetti();
+      showToday(entry, s); fireConfetti(); fireHearts();
     }
 
     function updateTZBadge(){
@@ -382,6 +387,24 @@ You make hard days softer.`;
         cont.appendChild(p);
       }
       setTimeout(()=>{ cont.innerHTML=''; }, 5000);
+    }
+
+    // Floating hearts for reveals (index page)
+    function fireHearts(){
+      const cont = document.getElementById('hearts'); if(!cont) return;
+      const colors = ['#ff6b9d','#ff92b2','#ff5fa8','#ffd1d9'];
+      const N = 20;
+      for(let i=0;i<N;i++){
+        const h = document.createElement('div'); h.className='heart';
+        const left = 8 + Math.random()*84; h.style.left = left + '%';
+        h.style.bottom = (6 + Math.random()*10) + '%';
+        const dur = 1200 + Math.random()*1400;
+        h.style.animation = `floatUp ${dur}ms cubic-bezier(.2,.9,.3,1) forwards`;
+        const color = colors[Math.floor(Math.random()*colors.length)];
+        h.innerHTML = `<svg viewBox="0 0 24 24" fill="${color}" aria-hidden="true"><path d="M12 21s-6.716-4.35-9.293-7.018C-1.08 10.077 2.41 6 6.5 6c2.31 0 3.98 1.47 4.5 2 .52-.53 2.19-2 4.5-2C21.59 6 23.08 10.08 21.293 13.982 18.716 16.65 12 21 12 21z"/></svg>`;
+        cont.appendChild(h);
+        setTimeout(()=>{ h.remove(); }, dur+250);
+      }
     }
 
     // Export / Import / Reset
@@ -442,6 +465,17 @@ You make hard days softer.`;
     els.importBtn.addEventListener('click', ()=> els.importInput.click());
     els.importInput.addEventListener('change', (e)=>{ const f = e.target.files[0]; if(f) importJSON(f); e.target.value=''; });
     els.clearBtn.addEventListener('click', resetAll);
+
+    // Decorate action buttons with small SVG icons (if not already present)
+    (function decorateIndexButtons(){
+      const reveal = document.getElementById('revealNowBtn');
+      if(reveal && !reveal.querySelector('svg')){
+        reveal.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14l-5-5 1.4-1.4L11 13.2l6.6-6.6L19 8l-8 8z"/></svg>');
+      }
+      const cp = document.getElementById('copyBtn'); if(cp && !cp.querySelector('svg')){
+        cp.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>');
+      }
+    })();
 
     // Init — auto import schedule.json if nothing saved; then run the loop
     loadIntoUI();

@@ -5,17 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>💌 Sorpresa de Hoy</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Sacramento&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
-      <div>
-        <div class="title">💌 Sorpresa de Hoy</div>
-        <div class="subtitle">Veras notas por 1 mes, distintas todos los dias. Se abre a tu hora local, siempre a la misma hora! Solo para mi niña lindaa!</div>
+      <div class="header-content">
+        <div class="title">💌 <span class="title-script">Sorpresa de Hoy</span></div>
+        <div class="subtitle">Verás notas distintas todos los días. Siempre a la misma hora. Solo para mi niña linda 💕</div>
       </div>
       <div class="btns">
-        <button class="ghost pill" id="resetBtn" title="Limpiar datos guardados si es necesario">Restablecer</button>
+        <button class="ghost pill danger" id="resetBtn" title="Limpiar datos guardados si es necesario">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm3 3h12l-1 11H7L6 9zM9 4h6l1 2H8l1-2z"/></svg>
+          Restablecer
+        </button>
       </div>
     </header>
 
@@ -23,17 +27,20 @@
       <div class="today" id="todayBox">
         <div class="tz-badge" id="tzBadge">—</div>
         <div id="todayState" class="hint">Cargando…</div>
-        <div class="countdown" id="countdown">–:–:–</div>
+        <div class="time-panel" id="countdown" aria-live="polite">
+          <div class="local-time" id="localTime">–:–:–</div>
+          <div class="reveal-pill" id="revealTimeDisplay">Revelación —</div>
+        </div>
         <div class="note" id="noteText" style="display:none"></div>
         <div class="today-actions">
-          <button id="checkNowBtn">Ver Nota</button>
-          <button class="ghost" id="copyBtn">Copiar nota</button>
+          <button id="checkNowBtn" class="primary pill">Ver Nota</button>
+          <button class="ghost pill" id="copyBtn">Copiar nota</button>
         </div>
         <div class="confetti" id="confetti"></div>
+        <div class="hearts" id="hearts" aria-hidden="true"></div>
       </div>
       <div class="footer">
-        Si lo abres antes de la hora de revelación, verás una cuenta regresiva. Y si lo abres después, la nota aparecera. 
-        Puedes copias la nota y guardarla, solo haz click en copiar ! 🙂‍↕️
+        Ojitos lindos y esa sonrisa hermosa. 
       </div>
     </section>
   </div>
@@ -47,6 +54,8 @@
       tzBadge: document.getElementById('tzBadge'),
       todayState: document.getElementById('todayState'),
       countdown: document.getElementById('countdown'),
+      localTime: document.getElementById('localTime'),
+      revealTimeDisplay: document.getElementById('revealTimeDisplay'),
       noteText: document.getElementById('noteText'),
       checkNowBtn: document.getElementById('checkNowBtn'),
       copyBtn: document.getElementById('copyBtn'),
@@ -63,7 +72,10 @@
       const text = s.notes[entry.noteIndex];
       els.noteText.textContent = text; els.noteText.style.display='block';
       els.todayState.textContent = `¡Revelado para ${s.settings.partnerName || 'ti'}!`;
-      els.countdown.textContent = '';
+      els.countdown.classList.add('revealed');
+      els.revealTimeDisplay.textContent = `Revelado · ${DateTime.fromISO(entry.revealedAt).toFormat('HH:mm')}`;
+      els.localTime.textContent = DateTime.now().setZone(s.settings.partnerTZ).toFormat('HH:mm:ss');
+      els.noteText.classList.add('revealed-pop');
     }
 
     function showCountdown(s){
@@ -72,7 +84,13 @@
       const target = (now > todayTarget) ? todayTarget.plus({days:1}) : todayTarget;
       const diff = target.diff(now, ['hours','minutes','seconds']).toObject();
       els.todayState.textContent = `Próxima revelación a las ${target.toFormat('HH:mm')} (${s.settings.partnerTZ})`;
-      els.countdown.textContent = `${String(Math.floor(diff.hours||0)).padStart(2,'0')}:${String(Math.floor(diff.minutes||0)).padStart(2,'0')}:${String(Math.floor(diff.seconds||0)).padStart(2,'0')}`;
+      // update live local time and reveal pill with remaining time
+      els.localTime.textContent = now.toFormat('HH:mm:ss');
+      const hh = String(Math.floor(diff.hours||0)).padStart(2,'0');
+      const mm = String(Math.floor(diff.minutes||0)).padStart(2,'0');
+      const ss = String(Math.floor(diff.seconds||0)).padStart(2,'0');
+      els.revealTimeDisplay.textContent = `En ${hh}:${mm}:${ss} — Revela ${target.toFormat('HH:mm')}`;
+      els.countdown.classList.remove('revealed');
       els.noteText.style.display='none';
     }
 
@@ -98,7 +116,7 @@
         entry.revealed = true; entry.revealedAt = now.toISO();
         save(s);
         showToday(entry, s);
-        fireConfetti();
+        fireConfetti(); fireHearts();
         return true;
       }
       if(entry && entry.revealed){ showToday(entry, s); return true; }
@@ -137,6 +155,24 @@
       setTimeout(()=>{ cont.innerHTML=''; }, 5000);
     }
 
+    // Floating hearts for reveals
+    function fireHearts(){
+      const cont = document.getElementById('hearts'); if(!cont) return;
+      const colors = ['#ff6b9d','#ff92b2','#ff5fa8','#ffd1d9'];
+      const N = 18;
+      for(let i=0;i<N;i++){
+        const h = document.createElement('div'); h.className='heart';
+        const left = 10 + Math.random()*80; h.style.left = left + '%';
+        h.style.bottom = (6 + Math.random()*8) + '%';
+        const dur = 1200 + Math.random()*1400;
+        h.style.animation = `floatUp ${dur}ms cubic-bezier(.2,.9,.3,1) forwards`;
+        const color = colors[Math.floor(Math.random()*colors.length)];
+        h.innerHTML = `<svg viewBox="0 0 24 24" fill="${color}" aria-hidden="true"><path d="M12 21s-6.716-4.35-9.293-7.018C-1.08 10.077 2.41 6 6.5 6c2.31 0 3.98 1.47 4.5 2 .52-.53 2.19-2 4.5-2C21.59 6 23.08 10.08 21.293 13.982 18.716 16.65 12 21 12 21z"/></svg>`;
+        cont.appendChild(h);
+        setTimeout(()=>{ h.remove(); }, dur+250);
+      }
+    }
+
     function copyNote(){
       const txt = els.noteText.textContent?.trim();
       if(!txt){ alert('Aún no se ha revelado ninguna nota.'); return; }
@@ -157,6 +193,18 @@
     els.checkNowBtn.addEventListener('click', ()=>{ if(!revealIfDue()){ tickCountdown(); }});
     els.copyBtn.addEventListener('click', copyNote);
     els.resetBtn.addEventListener('click', resetAll);
+
+    // Add micro-icon SVGs to action buttons (if not present)
+    (function decorateActionButtons(){
+      const chk = document.getElementById('checkNowBtn');
+      if(chk && !chk.querySelector('svg')){
+        chk.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14l-5-5 1.4-1.4L11 13.2l6.6-6.6L19 8l-8 8z"/></svg>');
+      }
+      const cp = document.getElementById('copyBtn');
+      if(cp && !cp.querySelector('svg')){
+        cp.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>');
+      }
+    })();
 
     // Init
     autoLoadScheduleFromJSON().then(()=>{ revealIfDue(); });
