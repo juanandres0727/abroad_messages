@@ -5,25 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Programador de Sorpresas</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sacramento&family=Indie+Flower&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
   <!-- Luxon for robust timezone handling -->
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
 </head>
 <body>
+
+  <!-- Floating Background Elements for Coziness -->
+  <div class="bg-decoration">
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+  </div>
+
   <div class="container">
     <header>
-      <div>
+      <div class="header-content">
         <div class="title">💌 <span class="title-script">Sorpresas para ella</span></div>
-        <div class="subtitle">Escribe notas dulces con anticipación → se revelarán en los días seleccionados en <span id="subTZ">su zona horaria</span>. Funciona completamente sin conexión.</div>
+        <div class="subtitle">Escribe notas dulces con anticipación → se revelarán en los días seleccionados en <span id="subTZ">su zona horaria</span>.</div>
       </div>
-      <div class="btns">
-        <button class="ghost pill" id="exportBtn">Exportar JSON</button>
-        <input type="file" id="importInput" accept="application/json" hidden>
-        <button class="ghost pill" id="importBtn">Importar</button>
-        <button class="ghost pill danger" id="clearBtn" title="Eliminar todos los datos">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm3 3h12l-1 11H7L6 9zM9 4h6l1 2H8l1-2z"/></svg>
-          Restablecer
-        </button>
+      <div class="header-actions">
+        <div class="action-group">
+          <button class="ghost pill" id="exportBtn">Exportar</button>
+          <input type="file" id="importInput" accept="application/json" hidden>
+          <button class="ghost pill" id="importBtn">Importar</button>
+        </div>
+        <div class="action-group">
+          <button class="ghost pill" id="clearBtn" title="Reiniciar todo">Restablecer</button>
+        </div>
       </div>
     </header>
 
@@ -34,32 +44,32 @@
         <div class="row">
           <div>
             <label>Su nombre</label>
-            <input id="partnerName" placeholder="e.g., ella" />
+            <input id="partnerName" placeholder="e.g., mi amor" />
           </div>
           <div>
             <label>Su zona horaria</label>
             <input id="partnerTZ" list="tzList" placeholder="e.g., Europe/Madrid" />
             <datalist id="tzList"></datalist>
-            <div class="hint">Consejo: Comienza a escribir (ej., "Europe/" o "America/").</div>
+            <div class="hint">Escribe "Europe/" o "America/" para buscar.</div>
           </div>
         </div>
         <div class="row">
           <div>
-            <label>Hora de revelación (su hora local)</label>
+            <label>Hora de revelación</label>
             <input id="revealTime" type="time" value="09:00" />
           </div>
           <div>
-            <label>Fecha de inicio (su fecha local)</label>
+            <label>Fecha de inicio</label>
             <input id="startDate" type="date" />
           </div>
         </div>
         <div class="row">
           <div>
-            <label>¿Cuántos días programar?</label>
+            <label>¿Cuántos días?</label>
             <input id="numDays" type="number" min="1" max="400" value="30" />
           </div>
           <div>
-            <label>¿Uno por día o días específicos de la semana?</label>
+            <label>Frecuencia</label>
             <select id="frequency">
               <option value="daily">Todos los días</option>
               <option value="weekdays">Días laborables (Lun–Vie)</option>
@@ -67,33 +77,34 @@
             </select>
           </div>
         </div>
-        <div id="customWeekdays" class="row" style="display:none">
-          <div><label><input type="checkbox" class="wd" value="1" checked> Lun</label></div>
-          <div><label><input type="checkbox" class="wd" value="2" checked> Mar</label></div>
-          <div><label><input type="checkbox" class="wd" value="3" checked> Mié</label></div>
-          <div><label><input type="checkbox" class="wd" value="4" checked> Jue</label></div>
-          <div><label><input type="checkbox" class="wd" value="5" checked> Vie</label></div>
-          <div><label><input type="checkbox" class="wd" value="6"> Sáb</label></div>
-          <div><label><input type="checkbox" class="wd" value="7"> Dom</label></div>
+        <div id="customWeekdays" class="custom-days" style="display:none">
+          <div class="weekday-options">
+            <label class="weekday-option"><input type="checkbox" class="wd" value="1" checked> Lun</label>
+            <label class="weekday-option"><input type="checkbox" class="wd" value="2" checked> Mar</label>
+            <label class="weekday-option"><input type="checkbox" class="wd" value="3" checked> Mié</label>
+            <label class="weekday-option"><input type="checkbox" class="wd" value="4" checked> Jue</label>
+            <label class="weekday-option"><input type="checkbox" class="wd" value="5" checked> Vie</label>
+            <label class="weekday-option"><input type="checkbox" class="wd" value="6"> Sáb</label>
+            <label class="weekday-option"><input type="checkbox" class="wd" value="7"> Dom</label>
+          </div>
         </div>
 
-        <h2 style="margin-top:14px">2) Escribe tus notas</h2>
-        <label>Una por línea (no necesitas comillas). Los emojis son bienvenidos ✨</label>
-        <textarea id="notes" placeholder="You’re my favorite hello and hardest goodbye.
+        <h2 style="margin-top:24px">2) Escribe tus notas</h2>
+        <label>Una nota por línea. ¡Sé creativo y cariñoso! ✨</label>
+        <textarea id="notes" placeholder="Eres mi notificación favorita.
 Te extraño un montón.
-Counting days to our next hug.
-You make distance feel small.
-I’m proud of you—keep going."></textarea>
+Contando los días para verte.
+Me haces muy feliz.
+Espero que tengas un día hermoso."></textarea>
         <div class="btns">
-          <button class="primary" id="generateBtn">Generar / Actualizar Horario</button>
-          <button id="shuffleBtn">Mezclar Notas</button>
+          <button class="primary" id="generateBtn">Generar Horario</button>
+          <button class="ghost" id="shuffleBtn">Mezclar Notas</button>
         </div>
-        <div class="hint">La programación asigna notas aleatoriamente a cada día elegido. Si tienes menos notas que días, se repetirán después de usar cada una una vez.</div>
 
-        <h2 style="margin-top:18px">3) Horario</h2>
-        <div id="scheduleWrap">
+        <h2 style="margin-top:24px">3) Horario</h2>
+        <div id="scheduleWrap" class="schedule-container">
           <table id="scheduleTable" aria-label="Schedule table">
-            <thead><tr><th>#</th><th>Fecha (su zona)</th><th>Hora</th><th>Nota</th><th>Estado</th></tr></thead>
+            <thead><tr><th>#</th><th>Fecha</th><th>Hora</th><th>Nota</th><th>Estado</th></tr></thead>
             <tbody id="schedBody"></tbody>
           </table>
         </div>
@@ -104,25 +115,63 @@ I’m proud of you—keep going."></textarea>
         <h2>Sorpresa de Hoy</h2>
         <div class="today" id="todayBox">
           <div class="tz-badge" id="tzBadge">—</div>
-          <div id="todayState" class="hint">Aún no se ha revelado ninguna nota.</div>
-          <div class="countdown" id="countdown">–:–:–</div>
-          <div class="note" id="noteText" style="display:none"></div>
-          <div class="btns" style="margin-top:12px">
-            <button class="accent" id="revealNowBtn">Revelar ahora</button>
-            <button id="checkNowBtn">Verificar ahora</button>
-            <button class="ghost" id="copyBtn">Copiar nota</button>
+
+          <!-- View 1: Countdown -->
+          <div id="countdown-view" class="countdown-view">
+              <div id="todayState" class="hint">...</div>
+              <div class="countdown" id="countdown">–:–:–</div>
+              <div class="btns">
+                <button class="ghost" id="checkNowBtn">Verificar ahora</button>
+              </div>
           </div>
+
+          <!-- View 2: Envelope (Ready to Open) -->
+          <div id="envelope-view" class="envelope-view" style="display:none;">
+             <div class="envelope-wrapper" id="envelopeWrapper">
+                <div class="envelope">
+                  <div class="flap"></div>
+                  <div class="pocket"></div>
+                  <div class="letter-preview"></div> <!-- Just a white visual inside -->
+                  <div class="seal">💌</div>
+                </div>
+             </div>
+             <div class="click-hint">¡Tienes una nota nueva! Haz clic para abrir.</div>
+          </div>
+
+          <!-- View 3: Revealed Note -->
+          <div id="note-view" class="note-view" style="display:none;">
+             <div class="note-paper">
+                <div id="noteText"></div>
+             </div>
+
+             <div class="reactions">
+                <button class="reaction-btn" title="Me encanta" data-emoji="🥰">🥰</button>
+                <button class="reaction-btn" title="Abrazo" data-emoji="🤗">🤗</button>
+                <button class="reaction-btn" title="Beso" data-emoji="😘">😘</button>
+                <button class="reaction-btn" title="Te extraño" data-emoji="🥺">🥺</button>
+             </div>
+
+             <div class="btns" style="margin-top:12px">
+                <button class="ghost" id="copyBtn">Copiar</button>
+             </div>
+          </div>
+
+          <!-- Admin Override Button (Always accessible if needed, or hide it) -->
+          <div style="margin-top:20px; opacity:0.3;">
+             <button class="ghost pill" style="font-size:10px; padding:4px 8px;" id="revealNowBtn">Debug: Revelar Ahora</button>
+          </div>
+
+          <!-- Effects -->
           <div class="confetti" id="confetti"></div>
-          <div class="hearts" id="hearts" aria-hidden="true"></div>
         </div>
-        <div class="footer">Si la página no estaba abierta en el momento exacto, se revelará la próxima vez que la abras después de esa hora.</div>
+        <div class="footer" style="text-align:center;">Si la página no estaba abierta a la hora exacta, verás la sorpresa la próxima vez que entres.</div>
       </section>
     </div>
   </div>
 
   <script>
     const { DateTime } = luxon;
-    const STORAGE_KEY = 'surpriseScheduler_v1';
+    const STORAGE_KEY = 'surpriseScheduler_v2'; // Bumped version
 
     const els = {
       partnerName: document.getElementById('partnerName'),
@@ -137,7 +186,6 @@ I’m proud of you—keep going."></textarea>
       generateBtn: document.getElementById('generateBtn'),
       shuffleBtn: document.getElementById('shuffleBtn'),
       schedBody: document.getElementById('schedBody'),
-      scheduleTable: document.getElementById('scheduleTable'),
       todayState: document.getElementById('todayState'),
       countdown: document.getElementById('countdown'),
       noteText: document.getElementById('noteText'),
@@ -151,11 +199,18 @@ I’m proud of you—keep going."></textarea>
       importInput: document.getElementById('importInput'),
       clearBtn: document.getElementById('clearBtn'),
       tzList: document.getElementById('tzList'),
-      todayBox: document.getElementById('todayBox'),
       confetti: document.getElementById('confetti'),
+
+      // New Views
+      countdownView: document.getElementById('countdown-view'),
+      envelopeView: document.getElementById('envelope-view'),
+      noteView: document.getElementById('note-view'),
+      envelopeWrapper: document.getElementById('envelopeWrapper'),
+      envelopeDiv: document.querySelector('.envelope'),
+      reactionBtns: document.querySelectorAll('.reaction-btn'),
     };
 
-    // Populate timezone list if supported
+    // Populate timezone list
     try {
       const zones = Intl.supportedValuesOf?.('timeZone') || [];
       zones.forEach(z => {
@@ -164,7 +219,6 @@ I’m proud of you—keep going."></textarea>
       });
     } catch(_){}
 
-    // Helpers
     const save = (data) => localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     const load = () => {
       try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || null; } catch { return null; }
@@ -214,7 +268,7 @@ You make hard days softer.`;
       let d = DateTime.fromISO(startDateISO, {zone: partnerTZ}).startOf('day');
       const out = [];
       while(out.length < numDays){
-        const wd = d.weekday; // 1 = Monday ... 7 = Sunday
+        const wd = d.weekday;
         const allow = (frequency === 'daily') ||
                       (frequency === 'weekdays' && wd >=1 && wd <=5) ||
                       (frequency === 'custom' && weekdays.includes(wd));
@@ -246,9 +300,9 @@ You make hard days softer.`;
         const time = date.set({hour: settings.revealHour, minute: settings.revealMinute});
         const status = row.revealed ? `<span class="pill-badge success">Revelado</span>` : `<span class="pill-badge scheduled">Programado</span>`;
         tr.innerHTML = `<td>${i+1}</td>
-                        <td>${date.toFormat('ccc, LLL d yyyy')}</td>
+                        <td>${date.toFormat('ccc, LLL d')}</td>
                         <td>${time.toFormat('HH:mm')}</td>
-                        <td title="${notes[row.noteIndex]}">${escapeHtml(notes[row.noteIndex]).slice(0,60)}${notes[row.noteIndex].length>60?'…':''}</td>
+                        <td title="${notes[row.noteIndex]}">${escapeHtml(notes[row.noteIndex]).slice(0,40)}${notes[row.noteIndex].length>40?'…':''}</td>
                         <td>${status}</td>`;
         els.schedBody.appendChild(tr);
       });
@@ -291,71 +345,129 @@ You make hard days softer.`;
       const settings = readSettings();
       const notes = readNotes();
       const saved = load();
+      // Try to preserve schedule if settings match
       const schedule = saved && deepEqual(saved.settings, settings) && deepEqual(saved.notes, notes)
         ? saved.schedule
         : assignNotesToDates(settings, notes);
       return { settings, notes, schedule };
     }
 
-    // Keep note visible after reveal; only show countdown if not revealed
+    // MAIN LOGIC
     function tickCountdown(){
       const s = load(); if(!s) return;
       const now = DateTime.now().setZone(s.settings.partnerTZ);
       const today = now.startOf('day').toISODate();
+
+      // Look for today's entry
       const entry = s.schedule.find(e => e.dateISO === today);
-      if (entry && entry.revealed) {
-        showToday(entry, s);
+
+      // If today has an entry:
+      if (entry) {
+        if (entry.revealed) {
+          // Already revealed -> Show note directly (or envelope if we want to reset it on reload? No, keep it simple)
+          // Actually, let's just show the note directly if already revealed previously.
+          // BUT, to make it cute, maybe we show the open envelope?
+          // Let's stick to: if revealed, show Note view.
+          showNoteView(entry, s);
+        } else {
+          // Not revealed yet. Check time.
+          const revealTime = now.set({hour:s.settings.revealHour, minute:s.settings.revealMinute, second:0, millisecond:0});
+          if (now >= revealTime) {
+            // It IS time, but user hasn't opened it yet (revealed flag in JSON is mainly for persistent tracking)
+            // Show ENVELOPE.
+            showEnvelopeView(entry, s);
+          } else {
+            // Not time yet -> Countdown
+            showCountdownView(s, revealTime);
+          }
+        }
       } else {
-        showCountdown(s);
+         // No entry for today -> Show countdown to next available date
+         showCountdownToNext(s, now);
       }
     }
 
-    function revealIfDue(){
-      const s = load(); if(!s) return false;
-      const now = DateTime.now().setZone(s.settings.partnerTZ);
-      const today = now.startOf('day').toISODate();
-      const entry = s.schedule.find(e=>e.dateISO === today);
-      const due = entry && !entry.revealed &&
-                  now >= DateTime.fromISO(entry.dateISO, {zone:s.settings.partnerTZ})
-                          .set({hour:s.settings.revealHour, minute:s.settings.revealMinute, second:0, millisecond:0});
-      if(due){
-        entry.revealed = true; entry.revealedAt = now.toISO();
-        persist(s);
-        showToday(entry, s);
-        fireConfetti(); fireHearts();
-        return true;
-      }
-      if(entry && entry.revealed){ showToday(entry, s); return true; }
-      showCountdown(s);
-      return false;
+    // Explicitly transition views
+    function switchView(viewName) {
+      els.countdownView.style.display = 'none';
+      els.envelopeView.style.display = 'none';
+      els.noteView.style.display = 'none';
+
+      if(viewName === 'countdown') els.countdownView.style.display = 'flex';
+      if(viewName === 'envelope') els.envelopeView.style.display = 'flex';
+      if(viewName === 'note') els.noteView.style.display = 'flex';
     }
 
-    function showToday(entry, s){
-      const text = s.notes[entry.noteIndex];
-      els.noteText.textContent = text; els.noteText.style.display='block';
-      els.todayState.textContent = `¡Revelado para ${s.settings.partnerName}!`;
-      els.countdown.textContent = '';
+    function showCountdownView(s, targetTime) {
+       switchView('countdown');
+       const now = DateTime.now().setZone(s.settings.partnerTZ);
+       const diff = targetTime.diff(now, ['hours','minutes','seconds']).toObject();
+       els.todayState.textContent = `Próxima carta para ${s.settings.partnerName} hoy a las ${targetTime.toFormat('HH:mm')}`;
+       els.countdown.textContent = `${String(Math.floor(diff.hours||0)).padStart(2,'0')}:${String(Math.floor(diff.minutes||0)).padStart(2,'0')}:${String(Math.floor(diff.seconds||0)).padStart(2,'0')}`;
     }
 
-    function showCountdown(s){
-      const now = DateTime.now().setZone(s.settings.partnerTZ);
-      const todayTarget = now.set({hour:s.settings.revealHour, minute:s.settings.revealMinute, second:0, millisecond:0});
-      const target = (now > todayTarget) ? todayTarget.plus({days:1}) : todayTarget;
-      const diff = target.diff(now, ['hours','minutes','seconds']).toObject();
-      els.todayState.textContent = `Próxima revelación para ${s.settings.partnerName} a las ${target.toFormat('HH:mm')} (${s.settings.partnerTZ})`;
-      els.countdown.textContent = `${String(Math.floor(diff.hours||0)).padStart(2,'0')}:${String(Math.floor(diff.minutes||0)).padStart(2,'0')}:${String(Math.floor(diff.seconds||0)).padStart(2,'0')}`;
-      els.noteText.style.display='none';
+    function showCountdownToNext(s, now) {
+       switchView('countdown');
+       // Find next entry in future
+       const futureEntries = s.schedule.filter(e => DateTime.fromISO(e.dateISO, {zone:s.settings.partnerTZ}) > now.startOf('day'));
+       if(futureEntries.length > 0) {
+         const next = futureEntries[0];
+         const nextDate = DateTime.fromISO(next.dateISO, {zone:s.settings.partnerTZ});
+         els.todayState.textContent = `Próxima carta: ${nextDate.toFormat('cccc, d LLL')}`;
+         els.countdown.textContent = "Pronto...";
+       } else {
+         els.todayState.textContent = "¡Todo completado!";
+         els.countdown.textContent = "🎉";
+       }
     }
 
+    function showEnvelopeView(entry, s) {
+       // If we are already viewing the envelope or note, don't interrupt (unless state changed)
+       if (els.noteView.style.display === 'flex') return;
+       if (els.envelopeView.style.display === 'flex') return;
+
+       switchView('envelope');
+
+       // Reset envelope state
+       els.envelopeDiv.classList.remove('open');
+
+       // Bind click to open
+       els.envelopeWrapper.onclick = () => {
+         // Animate open
+         els.envelopeDiv.classList.add('open');
+
+         // Mark as revealed in storage
+         entry.revealed = true;
+         entry.revealedAt = DateTime.now().setZone(s.settings.partnerTZ).toISO();
+         persist(s);
+         renderSchedule(s.settings, s.notes, s.schedule);
+
+         // Fire effects
+         fireConfetti();
+
+         // Wait for animation then show note
+         setTimeout(() => {
+           showNoteView(entry, s);
+         }, 800);
+       };
+    }
+
+    function showNoteView(entry, s) {
+      switchView('note');
+      els.noteText.textContent = s.notes[entry.noteIndex];
+    }
+
+    // Manual override
     function revealNow(){
-      const s = load(); if(!s) return alert('Por favor configura y genera un horario primero.');
+      const s = load(); if(!s) return alert('Configura primero.');
       const now = DateTime.now().setZone(s.settings.partnerTZ);
       const today = now.startOf('day').toISODate();
       const entry = s.schedule.find(e=>e.dateISO === today) || s.schedule.find(e=>!e.revealed) || s.schedule[0];
-      entry.revealed = true; entry.revealedAt = now.toISO();
-      persist(s);
-      renderSchedule(s.settings, s.notes, s.schedule);
-      showToday(entry, s); fireConfetti(); fireHearts();
+
+      if(entry) {
+        showEnvelopeView(entry, s);
+        // Auto click for debug? No, let them click.
+      }
     }
 
     function updateTZBadge(){
@@ -365,136 +477,128 @@ You make hard days softer.`;
 
     function copyNote(){
       const txt = els.noteText.textContent?.trim();
-      if(!txt){ alert('Aún no se ha revelado ninguna nota.'); return; }
       navigator.clipboard.writeText(txt).then(()=>{
-        els.copyBtn.textContent = '¡Copiado!'; setTimeout(()=>els.copyBtn.textContent='Copiar nota', 1200);
+        const orig = els.copyBtn.textContent;
+        els.copyBtn.textContent = '¡Copiado!'; setTimeout(()=>els.copyBtn.textContent=orig, 1200);
       });
     }
 
-    // Confetti
+    // Reaction Buttons
+    els.reactionBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+         const emoji = btn.getAttribute('data-emoji');
+         fireEmoji(emoji);
+      });
+    });
+
+    function fireEmoji(emoji) {
+      const cont = els.confetti;
+      for(let i=0; i<15; i++) {
+        const p = document.createElement('div');
+        p.textContent = emoji;
+        p.style.position = 'absolute';
+        p.style.left = (50 + (Math.random()*20 - 10)) + '%';
+        p.style.top = '50%';
+        p.style.fontSize = (20 + Math.random()*20) + 'px';
+        p.style.pointerEvents = 'none';
+        p.style.animation = `floatEmoji 1s ease-out forwards`;
+        // Random trajectory
+        const tx = (Math.random()*200 - 100) + 'px';
+        const ty = (Math.random()*200 - 100) + 'px';
+        p.style.setProperty('--tx', tx);
+        p.style.setProperty('--ty', ty);
+
+        cont.appendChild(p);
+        setTimeout(()=>p.remove(), 1000);
+      }
+
+      // Add a style rule for this animation if not exists
+      if(!document.getElementById('emoji-style')) {
+        const style = document.createElement('style');
+        style.id = 'emoji-style';
+        style.textContent = `
+          @keyframes floatEmoji {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.5); opacity: 0; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+
     function fireConfetti(){
       const cont = els.confetti; cont.innerHTML = '';
       const colors = ['#60a5fa','#34d399','#f472b6','#fbbf24','#a78bfa'];
-      const N = 120;
-      for(let i=0;i<N;i++){
+      for(let i=0;i<100;i++){
         const p = document.createElement('div'); p.className='p';
         p.style.left = Math.random()*100 + 'vw';
-        const dur = 2 + Math.random()*2.5; p.style.animation = `fall ${dur}s linear forwards`;
-        p.style.background = colors[i % colors.length];
-        p.style.transform = `translateY(-30px) rotate(${Math.random()*360}deg)`;
-        p.style.opacity = (0.8 + Math.random()*0.2).toFixed(2);
-        p.style.borderRadius = Math.random() < .5 ? '2px' : '999px';
+        p.style.background = colors[Math.floor(Math.random()*colors.length)];
+        p.style.animationDuration = (2 + Math.random()*3) + 's';
         cont.appendChild(p);
       }
       setTimeout(()=>{ cont.innerHTML=''; }, 5000);
     }
 
-    // Floating hearts for reveals (index page)
-    function fireHearts(){
-      const cont = document.getElementById('hearts'); if(!cont) return;
-      const colors = ['#ff6b9d','#ff92b2','#ff5fa8','#ffd1d9'];
-      const N = 20;
-      for(let i=0;i<N;i++){
-        const h = document.createElement('div'); h.className='heart';
-        const left = 8 + Math.random()*84; h.style.left = left + '%';
-        h.style.bottom = (6 + Math.random()*10) + '%';
-        const dur = 1200 + Math.random()*1400;
-        h.style.animation = `floatUp ${dur}ms cubic-bezier(.2,.9,.3,1) forwards`;
-        const color = colors[Math.floor(Math.random()*colors.length)];
-        h.innerHTML = `<svg viewBox="0 0 24 24" fill="${color}" aria-hidden="true"><path d="M12 21s-6.716-4.35-9.293-7.018C-1.08 10.077 2.41 6 6.5 6c2.31 0 3.98 1.47 4.5 2 .52-.53 2.19-2 4.5-2C21.59 6 23.08 10.08 21.293 13.982 18.716 16.65 12 21 12 21z"/></svg>`;
-        cont.appendChild(h);
-        setTimeout(()=>{ h.remove(); }, dur+250);
-      }
-    }
-
-    // Export / Import / Reset
-    function exportJSON(){
-      const s = load() || state();
-      const blob = new Blob([JSON.stringify(s, null, 2)], {type:'application/json'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = `surprise_scheduler_${Date.now()}.json`; a.click();
-      URL.revokeObjectURL(url);
-    }
-
-    function importJSON(file){
-      const reader = new FileReader();
-      reader.onload = (e)=>{
-        try {
-          const obj = JSON.parse(e.target.result);
-          if(!obj.settings || !obj.notes || !obj.schedule) throw new Error('Invalid file');
-          save(obj); loadIntoUI(); revealIfDue();
-        } catch(err){ alert('Error en la importación: '+ err.message); }
-      };
-      reader.readAsText(file);
-    }
-
     function resetAll(){
-      if(!confirm('Esto eliminará todas las notas, configuraciones y horarios. ¿Continuar?')) return;
+      if(!confirm('¿Seguro que quieres borrar todo?')) return;
       localStorage.removeItem(STORAGE_KEY);
-      loadIntoUI(); els.schedBody.innerHTML=''; els.noteText.style.display='none'; els.todayState.textContent='Aún no se ha revelado ninguna nota.'; els.countdown.textContent='–:–:–';
+      location.reload();
     }
 
-    // Auto-load schedule.json on first visit (so she doesn’t need Import)
     async function autoLoadScheduleFromJSON(){
       const existing = load(); if (existing) return;
       try {
-        const res = await fetch('schedule.json?v=' + Date.now(), { cache: 'no-store' });
+        const res = await fetch('schedule.json?v=' + Date.now());
         if (!res.ok) return;
         const obj = await res.json();
-        if (obj && obj.settings && obj.notes && obj.schedule) {
-          save(obj);
-          loadIntoUI();
-          revealIfDue();
-        }
-      } catch (_) { /* ignore */ }
+        save(obj); loadIntoUI();
+      } catch (_) { }
+    }
+
+    function exportJSON(){
+      const s = load() || state();
+      const blob = new Blob([JSON.stringify(s, null, 2)], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'sorpresas.json';
+      a.click();
+    }
+
+    function importJSON(file){
+      const r = new FileReader();
+      r.onload = e => {
+        try { save(JSON.parse(e.target.result)); loadIntoUI(); tickCountdown(); } catch(err){ alert('Error'); }
+      };
+      r.readAsText(file);
     }
 
     // Events
-    els.generateBtn.addEventListener('click', ()=>{ const s = state(); renderSchedule(s.settings, s.notes, s.schedule); persist(s); tickCountdown(); alert('¡Horario actualizado!'); });
+    els.generateBtn.addEventListener('click', ()=>{ const s = state(); renderSchedule(s.settings, s.notes, s.schedule); persist(s); tickCountdown(); alert('¡Listo!'); });
     els.shuffleBtn.addEventListener('click', ()=>{
-      const list = els.notes.value.split(/\n/).filter(Boolean); if(list.length<2){ return alert('Necesitas al menos dos notas para mezclar.'); }
-      els.notes.value = shuffle(list).join('\n');
+        const list = els.notes.value.split(/\n/).filter(Boolean);
+        if(list.length) els.notes.value = shuffle(list).join('\n');
     });
-    els.partnerTZ.addEventListener('input', updateTZBadge);
-    els.frequency.addEventListener('change', ()=>{ els.customWeekdays.style.display = els.frequency.value==='custom' ? '' : 'none'; });
     els.revealNowBtn.addEventListener('click', revealNow);
-    els.checkNowBtn.addEventListener('click', ()=>{ if(!revealIfDue()){ tickCountdown(); }});
+    els.checkNowBtn.addEventListener('click', tickCountdown);
     els.copyBtn.addEventListener('click', copyNote);
     els.exportBtn.addEventListener('click', exportJSON);
     els.importBtn.addEventListener('click', ()=> els.importInput.click());
-    els.importInput.addEventListener('change', (e)=>{ const f = e.target.files[0]; if(f) importJSON(f); e.target.value=''; });
+    els.importInput.addEventListener('change', (e)=>importJSON(e.target.files[0]));
     els.clearBtn.addEventListener('click', resetAll);
+    els.partnerTZ.addEventListener('input', updateTZBadge);
+    els.frequency.addEventListener('change', ()=>{ els.customWeekdays.style.display = els.frequency.value==='custom' ? '' : 'none'; });
 
-    // Decorate action buttons with small SVG icons (if not already present)
-    (function decorateIndexButtons(){
-      const reveal = document.getElementById('revealNowBtn');
-      if(reveal && !reveal.querySelector('svg')){
-        reveal.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14l-5-5 1.4-1.4L11 13.2l6.6-6.6L19 8l-8 8z"/></svg>');
-      }
-      const cp = document.getElementById('copyBtn'); if(cp && !cp.querySelector('svg')){
-        cp.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>');
-      }
-    })();
-
-    // Init — auto import schedule.json if nothing saved; then run the loop
+    // Init
     loadIntoUI();
     updateTZBadge();
-
     (async () => {
-      let s = load();
-      if (!s) {
-        await autoLoadScheduleFromJSON();
-        s = load();
-        if (!s) { // still nothing? create from UI fields
-          s = state(); 
-          save(s); 
-          renderSchedule(s.settings, s.notes, s.schedule);
-        }
-      }
-      revealIfDue();
-      (function loop(){ tickCountdown(); setTimeout(loop, 1000); })();
+       await autoLoadScheduleFromJSON();
+       if(!load()){ save(state()); renderSchedule(state().settings, state().notes, state().schedule); }
+
+       (function loop(){ tickCountdown(); setTimeout(loop, 1000); })();
     })();
+
   </script>
 </body>
 </html>
