@@ -16,7 +16,7 @@
         <div class="subtitle">Verás notas distintas todos los días. Siempre a la misma hora. Solo para mi niña linda 💕</div>
       </div>
       <div class="btns">
-        <button class="ghost pill danger" id="resetBtn" title="Limpiar datos guardados si es necesario">
+        <button class="ghost pill danger sm" id="resetBtn" title="Limpiar datos guardados si es necesario">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm3 3h12l-1 11H7L6 9zM9 4h6l1 2H8l1-2z"/></svg>
           Restablecer
         </button>
@@ -28,13 +28,12 @@
         <div class="tz-badge" id="tzBadge">—</div>
         <div id="todayState" class="hint">Cargando…</div>
         <div class="time-panel" id="countdown" aria-live="polite">
-          <div class="local-time" id="localTime">–:–:–</div>
           <div class="reveal-pill" id="revealTimeDisplay">Revelación —</div>
         </div>
         <div class="note" id="noteText" style="display:none"></div>
         <div class="today-actions">
-          <button id="checkNowBtn" class="primary pill">Ver Nota</button>
-          <button class="ghost pill" id="copyBtn">Copiar nota</button>
+        <button id="checkNowBtn" class="primary pill sm">Ver Nota</button>
+        <button class="ghost pill sm" id="copyBtn">Copiar nota</button>
         </div>
         <div class="confetti" id="confetti"></div>
         <div class="hearts" id="hearts" aria-hidden="true"></div>
@@ -54,7 +53,6 @@
       tzBadge: document.getElementById('tzBadge'),
       todayState: document.getElementById('todayState'),
       countdown: document.getElementById('countdown'),
-      localTime: document.getElementById('localTime'),
       revealTimeDisplay: document.getElementById('revealTimeDisplay'),
       noteText: document.getElementById('noteText'),
       checkNowBtn: document.getElementById('checkNowBtn'),
@@ -74,7 +72,6 @@
       els.todayState.textContent = `¡Revelado para ${s.settings.partnerName || 'ti'}!`;
       els.countdown.classList.add('revealed');
       els.revealTimeDisplay.textContent = `Revelado · ${DateTime.fromISO(entry.revealedAt).toFormat('HH:mm')}`;
-      els.localTime.textContent = DateTime.now().setZone(s.settings.partnerTZ).toFormat('HH:mm:ss');
       els.noteText.classList.add('revealed-pop');
     }
 
@@ -84,8 +81,7 @@
       const target = (now > todayTarget) ? todayTarget.plus({days:1}) : todayTarget;
       const diff = target.diff(now, ['hours','minutes','seconds']).toObject();
       els.todayState.textContent = `Próxima revelación a las ${target.toFormat('HH:mm')} (${s.settings.partnerTZ})`;
-      // update live local time and reveal pill with remaining time
-      els.localTime.textContent = now.toFormat('HH:mm:ss');
+      // update reveal pill with remaining time
       const hh = String(Math.floor(diff.hours||0)).padStart(2,'0');
       const mm = String(Math.floor(diff.minutes||0)).padStart(2,'0');
       const ss = String(Math.floor(diff.seconds||0)).padStart(2,'0');

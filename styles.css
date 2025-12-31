@@ -17,6 +17,24 @@
   --purple: #b48bdc;                /* Soft purple */
   --lavender: #d3b3e6;              /* Lavender accent */
   --rose: #ff9fb1;                  /* Rose */
+
+/* Small / compact button variant */
+button.sm, .btns .sm, .today-actions .sm {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 12px;
+  height: 36px;
+  min-width: 64px;
+}
+
+button.sm .icon, .sm .icon { width: 16px; height: 16px; margin-right: 8px; }
+
+.today-actions .sm { box-shadow: 0 6px 18px rgba(200,120,160,0.06); }
+.btns .sm { padding-inline: 12px; }
+
+/* Primary small tweaks */
+.primary.sm { padding: 6px 12px; font-size: 13px; }
+.ghost.sm { border-color: rgba(200,120,160,0.12); background: transparent; }
   --coral: #ffd1d9;                 /* Coral blush */
 
   /* Visual Effects */
@@ -162,7 +180,9 @@ header {
   font-weight: 500;
   margin-bottom: 8px;
   text-align: center;
-  margin-top: 64px;
+  margin: 64px auto 8px;
+  max-width: 820px;
+  line-height: 1.4;
 }
 
 /* ==========================================
@@ -559,4 +579,9 @@ tr.revealed td { color: var(--muted); opacity: 0.6; }
   .subtitle { margin-top: 8px; }
   .header-actions { flex-direction: column; align-items: stretch; }
   .today { padding: 20px 10px; }
+}
+
+/* Footer text centered for a tidy look */
+.footer {
+  text-align: center;
 }
