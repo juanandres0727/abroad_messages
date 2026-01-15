@@ -4,8 +4,8 @@
     "partnerTZ": "America/New_York",
     "revealHour": 16,
     "revealMinute": 0,
-    "startDateISO": "2025-11-14",
-    "numDays": 20,
+    "startDateISO": "2026-01-15",
+    "numDays": 11,
     "frequency": "daily",
     "weekdays": [
       1,
@@ -16,165 +16,93 @@
     ]
   },
   "notes": [
-    "I swear you get prettier every time I look at you.",
-    "No solo te amo, te deseo. Pienso en tus labios, tu cuerpo, tu piel, pero también en tu corazón y en la calma y felicidad que me das.",
-    "You’re the definition of beautiful to me.",
-    "Eres la novia perfecta, tu eres perfecta. La mujer de mis sueños !",
-    "Amo tu sonrisa amor , es única y hermosa.",
-    "Tu eres la mujer que quiero. La distancia no cambia eso, al contrario, me hace valorarte aun mas.",
-    "Eres mi prioridad numero 1 y siempre serás la primera. No importa donde este, ni que tan ocupado este !",
-    "Iluminas el mundo sin darte cuenta. No olvides lo increíble que eres.",
-    "Amo como tus ojos brillan siempre, y ese cafe hermoso en el sol. No hay nada mas hermoso que eso.",
-    "Tu cuerpo es perfecto, cada parte de ti. Te amo tal y como eres, sin cambiar nada.",
-    "Amor eres lo mejor de mi vida, lo mejor ha sido enamorarme de ti y sentir que cada día te amo mas y mas !",
-    "Me encanta como te mueves 🫢, como hablas, como existes. Eres hermosa en cada manera posible. Ojalá pudieras verte como yo te veo.",
+    "Sometimes I catch myself smiling at your photos because wow you are so beautiful.",
     "Amor nunca me voy a cansar de decirte lo mucho que amo tus ojitos cafes, son hermosos.",
     "Como te explico y te expreso que me vuelves locooo, no tengo palabras para describir lo que tu creas en mi !",
-    "Que quieres de mi hoy mi amor? Llamadita, abrazo virtual, silencio acompañado?",
+    "You're the definition of beautiful to me !",
+    "No solo te amo, te deseo. Pienso en tus labios, tu cuerpo, tu piel, pero también en tu corazón y en la calma y felicidad que me das.",
+    "Iluminas el mundo sin darte cuenta. No olvides lo increíble que eres.",
+    "I swear you get prettier every time I look at you.",
+    "Amor eres lo mejor de mi vida, lo mejor ha sido enamorarme de ti y sentir que cada día te amo mas y mas !",
+    "Eres la novia perfecta, tu eres perfecta. La mujer de mis sueños !",
     "Eres tu la mujer que quiero, eres la niña de mis ojos, solo tu !",
-    "Sometimes I catch myself smiling at your photos because wow you are so beautiful.",
-    "Tu cuerpo es hermoso para mi en formas que no puedo describir. Te admiro desde tu sonrisa hasta la suavidad de tu piel.",
-    "Lo estas haciendo mejor de lo que imaginas. Respira. Descansa. Yo estoy contigo en cada paso.",
-    "Amo cuando te quedas dormida en llamada, me encanta acompañarte en todo lo que haces."
+    "Amo como tus ojos brillan siempre, y ese cafe hermoso en el sol. No hay nada mas hermoso que eso."
   ],
   "schedule": [
     {
       "n": 1,
-      "dateISO": "2025-11-14",
-      "noteIndex": 5,
+      "dateISO": "2026-01-15",
+      "noteIndex": 3,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 2,
-      "dateISO": "2025-11-15",
-      "noteIndex": 6,
+      "dateISO": "2026-01-16",
+      "noteIndex": 0,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 3,
-      "dateISO": "2025-11-16",
+      "dateISO": "2026-01-17",
       "noteIndex": 4,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 4,
-      "dateISO": "2025-11-17",
-      "noteIndex": 14,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 5,
-      "dateISO": "2025-11-18",
-      "noteIndex": 9,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 6,
-      "dateISO": "2025-11-19",
-      "noteIndex": 11,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 7,
-      "dateISO": "2025-11-20",
-      "noteIndex": 17,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 8,
-      "dateISO": "2025-11-21",
-      "noteIndex": 19,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 9,
-      "dateISO": "2025-11-22",
-      "noteIndex": 2,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 10,
-      "dateISO": "2025-11-23",
-      "noteIndex": 15,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 11,
-      "dateISO": "2025-11-24",
-      "noteIndex": 18,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 12,
-      "dateISO": "2025-11-25",
-      "noteIndex": 3,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 13,
-      "dateISO": "2025-11-26",
-      "noteIndex": 7,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 14,
-      "dateISO": "2025-11-27",
-      "noteIndex": 12,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 15,
-      "dateISO": "2025-11-28",
-      "noteIndex": 8,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 16,
-      "dateISO": "2025-11-29",
-      "noteIndex": 0,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 17,
-      "dateISO": "2025-11-30",
-      "noteIndex": 16,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 18,
-      "dateISO": "2025-12-01",
-      "noteIndex": 13,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 19,
-      "dateISO": "2025-12-02",
+      "dateISO": "2026-01-18",
       "noteIndex": 10,
       "revealed": false,
       "revealedAt": null
     },
     {
-      "n": 20,
-      "dateISO": "2025-12-03",
+      "n": 5,
+      "dateISO": "2026-01-19",
+      "noteIndex": 2,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 6,
+      "dateISO": "2026-01-20",
+      "noteIndex": 9,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 7,
+      "dateISO": "2026-01-21",
+      "noteIndex": 7,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 8,
+      "dateISO": "2026-01-22",
+      "noteIndex": 8,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 9,
+      "dateISO": "2026-01-23",
+      "noteIndex": 6,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 10,
+      "dateISO": "2026-01-24",
       "noteIndex": 1,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 11,
+      "dateISO": "2026-01-25",
+      "noteIndex": 5,
       "revealed": false,
       "revealedAt": null
     }

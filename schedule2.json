@@ -1,0 +1,262 @@
+{
+  "settings": {
+    "partnerName": "Mi Laury",
+    "partnerTZ": "America/Bogota",
+    "revealHour": 18,
+    "revealMinute": 30,
+    "startDateISO": "2025-10-15",
+    "numDays": 30,
+    "frequency": "daily",
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "notes": [
+    "I love your smile!",
+    "Cuéntame un mini-triunfo y un mini-deseo de hoy.",
+    "Recuerda que solo te quiero a ti!",
+    "Hoy y siempre: contigo.",
+    "Estoy guardando muchos abrazos para gastarlos todos cuando te vea.",
+    "Inteligente, amable, hermosa, reina. Si, todo eso eres !",
+    "Mi pensamiento últimamente cuando nos volvamos a ver, en cámara lenta; mirada, sonrisa, abrazo.",
+    "En un mundo lleno de cosas temporales, Quiero que tu seas permanente.",
+    "Me quieres enviar un videito de los que me gustan? Para ver tus ojitos hermosos y tu sonrisa que me encanta.",
+    "Tengo un plan para Santa Marta: madrugar, ver el amanecer al frente de la playa, luego desayunar juntos.",
+    "Eres mi notificación favorita.",
+    "Mi plan secreto: robarte un beso por cada día que estuvimos separados",
+    "En Santa Marta me gustaría sentarme a ver el mar juntos, pero lo mas probable es que me distraiga viéndote a ti! ❤️",
+    "Confirmando: Sigo siendo tu notificación favorita?",
+    "Tú + yo + paciencia = nuestra mejor historia.",
+    "Cada vez que te miro, me doy cuenta que me encantas mas y mas.",
+    "Eres la mujer mas hermosa!",
+    "Me encantaaaa tu sonrisa ! Recuérdalo siempre",
+    "Mi debilidad tiene nombre, apellido, unos ojos hermosos, una sonrisa encantadora y una carita que enamora.",
+    "Amo la combinación de tus ojitos con tu hermosa sonrisa.",
+    "Quiero que seas solo miaa y de nadie mas ! 🫣",
+    "Solo te quería recordar hoy que te quieroo demasiadoo ! ❤️",
+    "Recuerda que me encantas demasiado y siempre pienso en ti.",
+    "Que necesitas de mi hoy: chiste, abrazo virtual, llamada, un mensaje motivacional , silencio acompañado?",
+    "Pienso en ti 24/7: me levanto pienso en ti, estudio pienso en ti, estoy en clase pienso en ti, entreno pienso en ti, durmiendo pienso en ti.",
+    "I love your eyes!",
+    "Recuerda que no estas sola; estoy a un mensaje o a una llamada de distancia.",
+    "Muchas cosas lindas en este mundo, pero tu definitivamente eres la numero 1.",
+    "Te pienso más de lo que te lo digo. Te extraño tanto!",
+    "Plan? Me mandas foticos tuyas que te gusten y yo las uso para mi fondo de pantalla."
+  ],
+  "schedule": [
+    {
+      "n": 1,
+      "dateISO": "2025-10-15",
+      "noteIndex": 19,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 2,
+      "dateISO": "2025-10-16",
+      "noteIndex": 26,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 3,
+      "dateISO": "2025-10-17",
+      "noteIndex": 12,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 4,
+      "dateISO": "2025-10-18",
+      "noteIndex": 1,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 5,
+      "dateISO": "2025-10-19",
+      "noteIndex": 21,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 6,
+      "dateISO": "2025-10-20",
+      "noteIndex": 9,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 7,
+      "dateISO": "2025-10-21",
+      "noteIndex": 16,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 8,
+      "dateISO": "2025-10-22",
+      "noteIndex": 24,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 9,
+      "dateISO": "2025-10-23",
+      "noteIndex": 14,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 10,
+      "dateISO": "2025-10-24",
+      "noteIndex": 3,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 11,
+      "dateISO": "2025-10-25",
+      "noteIndex": 5,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 12,
+      "dateISO": "2025-10-26",
+      "noteIndex": 22,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 13,
+      "dateISO": "2025-10-27",
+      "noteIndex": 29,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 14,
+      "dateISO": "2025-10-28",
+      "noteIndex": 11,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 15,
+      "dateISO": "2025-10-29",
+      "noteIndex": 18,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 16,
+      "dateISO": "2025-10-30",
+      "noteIndex": 10,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 17,
+      "dateISO": "2025-10-31",
+      "noteIndex": 27,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 18,
+      "dateISO": "2025-11-01",
+      "noteIndex": 6,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 19,
+      "dateISO": "2025-11-02",
+      "noteIndex": 13,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 20,
+      "dateISO": "2025-11-03",
+      "noteIndex": 2,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 21,
+      "dateISO": "2025-11-04",
+      "noteIndex": 20,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 22,
+      "dateISO": "2025-11-05",
+      "noteIndex": 4,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 23,
+      "dateISO": "2025-11-06",
+      "noteIndex": 25,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 24,
+      "dateISO": "2025-11-07",
+      "noteIndex": 28,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 25,
+      "dateISO": "2025-11-08",
+      "noteIndex": 8,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 26,
+      "dateISO": "2025-11-09",
+      "noteIndex": 15,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 27,
+      "dateISO": "2025-11-10",
+      "noteIndex": 17,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 28,
+      "dateISO": "2025-11-11",
+      "noteIndex": 23,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 29,
+      "dateISO": "2025-11-12",
+      "noteIndex": 0,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 30,
+      "dateISO": "2025-11-13",
+      "noteIndex": 7,
+      "revealed": false,
+      "revealedAt": null
+    }
+  ]
+}
