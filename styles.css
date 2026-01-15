@@ -881,6 +881,7 @@ tr.revealed td {
   .today-actions {
     width: 100%;
     gap: 8px;
+    margin-top: 24px;
   }
   
   .today-actions button {
