@@ -2,22 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>💌 Sorpresa de Hoy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff92b2" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>💌 Sorpresa de Hoy 💌</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Sacramento:wght@400&family=Indie+Flower&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="header-content">
-        <div class="title">💌 <span class="title-script">Sorpresa de Hoy</span></div>
-        <div class="subtitle">Verás notas distintas todos los días. Siempre a la misma hora. Solo para mi niña linda 💕</div>
+        <div class="title">💌 <span class="title-script">Sorpresa de Hoy  </span> 💌 </div>
+        <div class="subtitle">Notas para mi niña, solo para ti, mi futura esposa ❤️‍🔥</div>
       </div>
       <div class="btns">
         <button class="ghost pill danger sm" id="resetBtn" title="Limpiar datos guardados si es necesario">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm3 3h12l-1 11H7L6 9zM9 4h6l1 2H8l1-2z"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3V6zm3 3h12l-1 11H7L6 9zM9 4h6l1 2H8l1-2z" fill="currentColor"/></svg>
           Restablecer
         </button>
       </div>
@@ -25,21 +28,21 @@
 
     <section class="card">
       <div class="today" id="todayBox">
-        <div class="tz-badge" id="tzBadge">—</div>
+        <div class="tz-badge" id="tzBadge">Te quiero tanto que deseo morir antes que tú para no tener que soportar el dolor de perderte ❤️‍🔥</div>
         <div id="todayState" class="hint">Cargando…</div>
         <div class="time-panel" id="countdown" aria-live="polite">
           <div class="reveal-pill" id="revealTimeDisplay">Revelación —</div>
         </div>
         <div class="note" id="noteText" style="display:none"></div>
         <div class="today-actions">
-        <button id="checkNowBtn" class="primary pill sm">Ver Nota</button>
-        <button class="ghost pill sm" id="copyBtn">Copiar nota</button>
+          <button id="checkNowBtn" class="primary pill sm">Ver Nota</button>
+          <button class="ghost pill sm" id="copyBtn">Copiar nota</button>
         </div>
         <div class="confetti" id="confetti"></div>
         <div class="hearts" id="hearts" aria-hidden="true"></div>
       </div>
       <div class="footer">
-        Ojitos lindos y esa sonrisa hermosa. 
+        Ojitos lindos, sonrisa hermosa, mis pecas. 
       </div>
     </section>
   </div>
@@ -80,7 +83,6 @@
       const todayTarget = now.set({hour:s.settings.revealHour, minute:s.settings.revealMinute, second:0, millisecond:0});
       const target = (now > todayTarget) ? todayTarget.plus({days:1}) : todayTarget;
       const diff = target.diff(now, ['hours','minutes','seconds']).toObject();
-      els.todayState.textContent = `Próxima revelación a las ${target.toFormat('HH:mm')} (${s.settings.partnerTZ})`;
       // update reveal pill with remaining time
       const hh = String(Math.floor(diff.hours||0)).padStart(2,'0');
       const mm = String(Math.floor(diff.minutes||0)).padStart(2,'0');
@@ -97,7 +99,6 @@
       const today = now.startOf('day').toISODate();
       const entry = s.schedule.find(e => e.dateISO === today);
       if (entry && entry.revealed) { showToday(entry, s); } else { showCountdown(s); }
-      els.tzBadge.textContent = s.settings.partnerTZ;
     }
 
     function revealIfDue(){
