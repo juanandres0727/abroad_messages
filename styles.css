@@ -322,6 +322,8 @@ input:focus, select:focus, textarea:focus {
   font-size: 13px;
   margin-top: 6px;
   font-family: 'Indie Flower', cursive;
+  display: block;
+  min-height: 18px;
 }
 
 .custom-days {
@@ -867,9 +869,9 @@ tr.revealed td {
   }
   
   .today {
-    padding: 16px 12px;
-    min-height: 280px;
-    gap: 12px;
+    padding: 24px 16px;
+    min-height: 380px;
+    gap: 16px;
   }
   
   .note {
@@ -902,6 +904,12 @@ tr.revealed td {
   
   input, select, textarea {
     font-size: 16px;
+  }
+  
+  .tz-badge {
+    position: static;
+    transform: none;
+    margin-bottom: 12px;
   }
 }
 
