@@ -1,0 +1,110 @@
+{
+  "settings": {
+    "partnerName": "Mi Laury, Mi Diosa",
+    "partnerTZ": "America/New_York",
+    "revealHour": 16,
+    "revealMinute": 0,
+    "startDateISO": "2026-01-15",
+    "numDays": 11,
+    "frequency": "daily",
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "notes": [
+    "Sometimes I catch myself smiling at your photos because wow you are so beautiful.",
+    "Amor nunca me voy a cansar de decirte lo mucho que amo tus ojitos cafes, son hermosos.",
+    "Como te explico y te expreso que me vuelves locooo, no tengo palabras para describir lo que tu creas en mi !",
+    "You're the definition of beautiful to me !",
+    "No solo te amo, te deseo. Pienso en tus labios, tu cuerpo, tu piel, pero también en tu corazón y en la calma y felicidad que me das.",
+    "Iluminas el mundo sin darte cuenta. No olvides lo increíble que eres.",
+    "I swear you get prettier every time I look at you.",
+    "Amor eres lo mejor de mi vida, lo mejor ha sido enamorarme de ti y sentir que cada día te amo mas y mas !",
+    "Eres la novia perfecta, tu eres perfecta. La mujer de mis sueños !",
+    "Eres tu la mujer que quiero, eres la niña de mis ojos, solo tu !",
+    "Amo como tus ojos brillan siempre, y ese cafe hermoso en el sol. No hay nada mas hermoso que eso."
+  ],
+  "schedule": [
+    {
+      "n": 1,
+      "dateISO": "2026-01-15",
+      "noteIndex": 3,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 2,
+      "dateISO": "2026-01-16",
+      "noteIndex": 0,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 3,
+      "dateISO": "2026-01-17",
+      "noteIndex": 4,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 4,
+      "dateISO": "2026-01-18",
+      "noteIndex": 10,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 5,
+      "dateISO": "2026-01-19",
+      "noteIndex": 2,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 6,
+      "dateISO": "2026-01-20",
+      "noteIndex": 9,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 7,
+      "dateISO": "2026-01-21",
+      "noteIndex": 7,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 8,
+      "dateISO": "2026-01-22",
+      "noteIndex": 8,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 9,
+      "dateISO": "2026-01-23",
+      "noteIndex": 6,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 10,
+      "dateISO": "2026-01-24",
+      "noteIndex": 1,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 11,
+      "dateISO": "2026-01-25",
+      "noteIndex": 5,
+      "revealed": false,
+      "revealedAt": null
+    }
+  ]
+}
