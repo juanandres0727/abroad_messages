@@ -98,7 +98,6 @@ Me haces muy feliz.
 Espero que tengas un día hermoso."></textarea>
         <div class="btns">
           <button class="primary" id="generateBtn">Generar Horario</button>
-          <button class="ghost" id="shuffleBtn">Mezclar Notas</button>
         </div>
 
         <h2 style="margin-top:24px">3) Horario</h2>
@@ -184,7 +183,6 @@ Espero que tengas un día hermoso."></textarea>
       wdChecks: () => Array.from(document.querySelectorAll('.wd')),
       notes: document.getElementById('notes'),
       generateBtn: document.getElementById('generateBtn'),
-      shuffleBtn: document.getElementById('shuffleBtn'),
       schedBody: document.getElementById('schedBody'),
       todayState: document.getElementById('todayState'),
       countdown: document.getElementById('countdown'),
@@ -575,10 +573,6 @@ You make hard days softer.`;
 
     // Events
     els.generateBtn.addEventListener('click', ()=>{ const s = state(); renderSchedule(s.settings, s.notes, s.schedule); persist(s); tickCountdown(); alert('¡Listo!'); });
-    els.shuffleBtn.addEventListener('click', ()=>{
-        const list = els.notes.value.split(/\n/).filter(Boolean);
-        if(list.length) els.notes.value = shuffle(list).join('\n');
-    });
     els.revealNowBtn.addEventListener('click', revealNow);
     els.checkNowBtn.addEventListener('click', tickCountdown);
     els.copyBtn.addEventListener('click', copyNote);
