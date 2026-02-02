@@ -4,8 +4,8 @@
     "partnerTZ": "America/New_York",
     "revealHour": 10,
     "revealMinute": 0,
-    "startDateISO": "2026-01-26",
-    "numDays": 6,
+    "startDateISO": "2026-02-02",
+    "numDays": 28,
     "frequency": "daily",
     "weekdays": [
       1,
@@ -16,53 +16,229 @@
     ]
   },
   "notes": [
-    "Si tienes un día difícil hoy, por favor no dudes en llamarme y yo estaré para ti.",
-    "Ten paciencia amor, yo se que la distancia no es fácil. Pero yo la tendré por que se que lo de nosotros es perfecto.",
-    "Todos los días te extraño, quiero verte, abrazarte, besarte. Pero se que sera pronto.",
-    "Creo en nosotros y que saldremos adelante.",
-    "Cada dia me enamoro mas de ti! Todo de ti me enamora",
-    "Quiero tener una familia contigo, viajar contigo, construir un hogar juntos."
+    "Aunque estemos en países distintos, siento que mi corazón siempre sabe exactamente dónde estás tú.",
+    "La distancia solo es un recordatorio de lo mucho que valdrá la pena cuando pueda abrazarte otra vez.",
+    "No importa cuántos kilómetros haya entre nosotros, sigues siendo mi lugar favorito.",
+    "Nuestra relación me enseña que el amor no depende de la cercanía, sino de la conexión.",
+    "Lo que estamos construyendo es fuerte, paciente y real. Y eso me motiva todos los días.",
+    "La distancia no nos debilita, nos entrena para un amor más grande.",
+    "Cada día lejos es un día más cerca de volver a vernos.",
+    "Hoy me hiciste falta, pero también me hiciste sonreír al recordarte.",
+    "Gracias por existir.",
+    "Eres mi persona favorita, incluso a kilómetros de distancia.",
+    "Un día menos para volver a verte.",
+    "Amo ver tu sonrisa todos los dias.",
+    "No sabes cuanto te amo, es imposible describirlo.",
+    "Eres perfecta en todos los sentidos, tu personalidad, tu cuerpo, todo !",
+    "Mi amor confío en ti y en lo que estamos construyendo.",
+    "Mi vida eres mi mundo entero y quiero construir una vida contigo.",
+    "Mi niña te quieres casar conmigo?",
+    "Ten paciencia mi amor que vamos a salir adelante y vamos a tener el futuro que tanto queremos.",
+    "Te extraño de todas las maneras posibles y lo hago cada segundo del dia.",
+    "Mi amor confío en ti y en nosotros.",
+    "Mi amo te lo quiero meter tan duro que llores y me digas que te duele demasiado.",
+    "Yo se que la distancia es difícil pero nuestro amor es tan fuerte que vamos a salir adelante.",
+    "La distancia es dura pero esto no es eterno, tiene un final.",
+    "Soy todo tuyo, mi corazón, mi pipí es tuyo, soy completamente tuyo.",
+    "Estoy demasiado enamorado de ti, me tienes perdido en todo de ti.",
+    "Olvidemos el pasado y construyamos el mejor futuro, que todos nos envidien.",
+    "Te amo infinitamente. ❤️‍🔥",
+    "Quiero estar a tu lado toda la vida. No hay nadie mas. Solo tu"
   ],
   "schedule": [
     {
       "n": 1,
-      "dateISO": "2026-01-26",
-      "noteIndex": 5,
+      "dateISO": "2026-02-02",
+      "noteIndex": 18,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 2,
-      "dateISO": "2026-01-27",
-      "noteIndex": 2,
+      "dateISO": "2026-02-03",
+      "noteIndex": 27,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 3,
-      "dateISO": "2026-01-28",
-      "noteIndex": 1,
+      "dateISO": "2026-02-04",
+      "noteIndex": 19,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 4,
-      "dateISO": "2026-01-29",
-      "noteIndex": 4,
+      "dateISO": "2026-02-05",
+      "noteIndex": 0,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 5,
-      "dateISO": "2026-01-30",
-      "noteIndex": 3,
+      "dateISO": "2026-02-06",
+      "noteIndex": 5,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 6,
-      "dateISO": "2026-01-31",
-      "noteIndex": 0,
+      "dateISO": "2026-02-07",
+      "noteIndex": 13,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 7,
+      "dateISO": "2026-02-08",
+      "noteIndex": 3,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 8,
+      "dateISO": "2026-02-09",
+      "noteIndex": 11,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 9,
+      "dateISO": "2026-02-10",
+      "noteIndex": 20,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 10,
+      "dateISO": "2026-02-11",
+      "noteIndex": 7,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 11,
+      "dateISO": "2026-02-12",
+      "noteIndex": 10,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 12,
+      "dateISO": "2026-02-13",
+      "noteIndex": 24,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 13,
+      "dateISO": "2026-02-14",
+      "noteIndex": 12,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 14,
+      "dateISO": "2026-02-15",
+      "noteIndex": 23,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 15,
+      "dateISO": "2026-02-16",
+      "noteIndex": 1,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 16,
+      "dateISO": "2026-02-17",
+      "noteIndex": 22,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 17,
+      "dateISO": "2026-02-18",
+      "noteIndex": 6,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 18,
+      "dateISO": "2026-02-19",
+      "noteIndex": 4,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 19,
+      "dateISO": "2026-02-20",
+      "noteIndex": 9,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 20,
+      "dateISO": "2026-02-21",
+      "noteIndex": 16,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 21,
+      "dateISO": "2026-02-22",
+      "noteIndex": 17,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 22,
+      "dateISO": "2026-02-23",
+      "noteIndex": 15,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 23,
+      "dateISO": "2026-02-24",
+      "noteIndex": 25,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 24,
+      "dateISO": "2026-02-25",
+      "noteIndex": 14,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 25,
+      "dateISO": "2026-02-26",
+      "noteIndex": 21,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 26,
+      "dateISO": "2026-02-27",
+      "noteIndex": 26,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 27,
+      "dateISO": "2026-02-28",
+      "noteIndex": 2,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 28,
+      "dateISO": "2026-03-01",
+      "noteIndex": 8,
       "revealed": false,
       "revealedAt": null
     }

@@ -1,0 +1,70 @@
+{
+  "settings": {
+    "partnerName": "Mi Amor, Mi Niña",
+    "partnerTZ": "America/New_York",
+    "revealHour": 10,
+    "revealMinute": 0,
+    "startDateISO": "2026-01-26",
+    "numDays": 6,
+    "frequency": "daily",
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "notes": [
+    "Si tienes un día difícil hoy, por favor no dudes en llamarme y yo estaré para ti.",
+    "Ten paciencia amor, yo se que la distancia no es fácil. Pero yo la tendré por que se que lo de nosotros es perfecto.",
+    "Todos los días te extraño, quiero verte, abrazarte, besarte. Pero se que sera pronto.",
+    "Creo en nosotros y que saldremos adelante.",
+    "Cada dia me enamoro mas de ti! Todo de ti me enamora",
+    "Quiero tener una familia contigo, viajar contigo, construir un hogar juntos."
+  ],
+  "schedule": [
+    {
+      "n": 1,
+      "dateISO": "2026-01-26",
+      "noteIndex": 5,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 2,
+      "dateISO": "2026-01-27",
+      "noteIndex": 2,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 3,
+      "dateISO": "2026-01-28",
+      "noteIndex": 1,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 4,
+      "dateISO": "2026-01-29",
+      "noteIndex": 4,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 5,
+      "dateISO": "2026-01-30",
+      "noteIndex": 3,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 6,
+      "dateISO": "2026-01-31",
+      "noteIndex": 0,
+      "revealed": false,
+      "revealedAt": null
+    }
+  ]
+}
