@@ -278,16 +278,21 @@ You make hard days softer.`;
 
     function assignNotesToDates(settings, notes){
       const dates = nextDates(settings);
-      const base = notes.map((t, idx)=>({ idx, t }));
-      let pool = shuffle(base.slice());
       const entries = [];
-      dates.forEach((dt, i)=>{
-        if(pool.length === 0) pool = shuffle(base.slice());
-        const pick = pool.pop();
-        entries.push({ n: i+1, dateISO: dt.toISODate(), noteIndex: pick.idx, revealed:false, revealedAt:null });
+      dates.forEach((dt, i) => {
+        const noteIndex = i < notes.length ? i : notes.length - 1;
+
+        entries.push({
+          n: i + 1,
+          dateISO: dt.toISODate(),
+          noteIndex: noteIndex,
+          revealed: false,
+          revealedAt: null
+        });
       });
+
       return entries;
-    }
+    } 
 
     function renderSchedule(settings, notes, schedule){
       els.schedBody.innerHTML = '';
