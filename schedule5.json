@@ -16,25 +16,8 @@
     ]
   },
   "notes": [
-    "1. Hoy te mando muy buenas energías y sonríe mucho.",
-    "2. Mi amor por ti solo crece aun mas todos los días.",
-    "3. Recuerda que aunque no estemos juntos fisicamente, nunca mas vas a estar solita, siempre te voy a acompañar.",
-    "4. Somos el mejor equipo y una pareja que todos envidian. Sabes por que? Mañana te lo dire !",
-    "5. Somos una pareja que todos envidian por que somos un equipo, donde confiamos en el otro y trabajamos juntos y tenemos el amor mas grande que puede existir.",
-    "6. No sabes cuanto te extraño todos los días, te quiero ver ya.",
-    "7. Tu eres una mujer increíble, noble, honesta, con valores, linda, eres perfecta y lo tienes todo.",
-    "8. Ya quiero verte mi vida, el tiempo se esta pasando super rápido ! Ya casiiii !",
-    "9. Esto es un proceso y vamos super bien, cada día mejoramos y avanzamos hacia el futuro que queremos, tu me motivas a luchar cada dia.",
-    "10. Quiero una vida contigo, viajar contigo, vivir contigo, casarme contigo y luego tener hijos contigo.",
-    "11. Te extrañooo demasiadoo, pero se que ya pronto nos vamos a ver!",
-    "12. Mi amoooor llegue a Colombia, cada vez estoy mas cerca de verte y tocarte! Que felicidad ! 😁",
-    "13. Recuerda que soy tu mejor amigo, novio, esposo. Así que no dudes en decirme como estas, siempre tendré tiempo para escucharte.",
-    "14. Mira lo lejos que hemos llegado y nada nos va a separar, hemos pasado las pruebas mas difíciles.",
-    "15. Gracias por amarme y por ser esa niña tierna y linda conmigo, me haces feliz todos los días.",
-    "16. Espero con ansias volver a verte, ver tus ojitos lindos en persona y esa sonrisa que me motiva todos los días.",
-    "17. Gracias por resistir conmigo y por estar a mi lado, eres mi mundo! 🌎❤️‍🔥",
-    "18. Nuestro primer viaje de muchos que faltan en nuestra vida inicia mañana , que emocioooon !",
-    "19. Holaaaa mi amoooor, estamos juntos otra vez! Te amoooo ❤️‍🔥La distancia solo es un recordatorio de lo mucho que valdrá la pena cuando pueda abrazarte otra vez.",
+    "Aunque estemos en países distintos, siento que mi corazón siempre sabe exactamente dónde estás tú.",
+    "La distancia solo es un recordatorio de lo mucho que valdrá la pena cuando pueda abrazarte otra vez.",
     "No importa cuántos kilómetros haya entre nosotros, sigues siendo mi lugar favorito.",
     "Nuestra relación me enseña que el amor no depende de la cercanía, sino de la conexión.",
     "Lo que estamos construyendo es fuerte, paciente y real. Y eso me motiva todos los días.",
@@ -66,70 +49,70 @@
     {
       "n": 1,
       "dateISO": "2026-02-02",
-      "noteIndex": 0,
+      "noteIndex": 18,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 2,
       "dateISO": "2026-02-03",
-      "noteIndex": 1,
+      "noteIndex": 27,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 3,
       "dateISO": "2026-02-04",
-      "noteIndex": 2,
+      "noteIndex": 19,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 4,
       "dateISO": "2026-02-05",
-      "noteIndex": 3,
+      "noteIndex": 0,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 5,
       "dateISO": "2026-02-06",
-      "noteIndex": 4,
+      "noteIndex": 5,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 6,
       "dateISO": "2026-02-07",
-      "noteIndex": 5,
+      "noteIndex": 13,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 7,
       "dateISO": "2026-02-08",
-      "noteIndex": 6,
+      "noteIndex": 3,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 8,
       "dateISO": "2026-02-09",
-      "noteIndex": 7,
+      "noteIndex": 11,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 9,
       "dateISO": "2026-02-10",
-      "noteIndex": 8,
+      "noteIndex": 20,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 10,
       "dateISO": "2026-02-11",
-      "noteIndex": 9,
+      "noteIndex": 7,
       "revealed": false,
       "revealedAt": null
     },
@@ -143,7 +126,7 @@
     {
       "n": 12,
       "dateISO": "2026-02-13",
-      "noteIndex": 11,
+      "noteIndex": 24,
       "revealed": false,
       "revealedAt": null
     },
@@ -157,105 +140,105 @@
     {
       "n": 14,
       "dateISO": "2026-02-15",
-      "noteIndex": 13,
+      "noteIndex": 23,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 15,
       "dateISO": "2026-02-16",
-      "noteIndex": 14,
+      "noteIndex": 1,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 16,
       "dateISO": "2026-02-17",
-      "noteIndex": 15,
+      "noteIndex": 22,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 17,
       "dateISO": "2026-02-18",
-      "noteIndex": 16,
+      "noteIndex": 6,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 18,
       "dateISO": "2026-02-19",
-      "noteIndex": 17,
+      "noteIndex": 4,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 19,
       "dateISO": "2026-02-20",
-      "noteIndex": 18,
+      "noteIndex": 9,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 20,
       "dateISO": "2026-02-21",
-      "noteIndex": 19,
+      "noteIndex": 16,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 21,
       "dateISO": "2026-02-22",
-      "noteIndex": 20,
+      "noteIndex": 17,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 22,
       "dateISO": "2026-02-23",
-      "noteIndex": 21,
+      "noteIndex": 15,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 23,
       "dateISO": "2026-02-24",
-      "noteIndex": 22,
+      "noteIndex": 25,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 24,
       "dateISO": "2026-02-25",
-      "noteIndex": 23,
+      "noteIndex": 14,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 25,
       "dateISO": "2026-02-26",
-      "noteIndex": 24,
+      "noteIndex": 21,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 26,
       "dateISO": "2026-02-27",
-      "noteIndex": 25,
+      "noteIndex": 26,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 27,
       "dateISO": "2026-02-28",
-      "noteIndex": 26,
+      "noteIndex": 2,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 28,
       "dateISO": "2026-03-01",
-      "noteIndex": 27,
+      "noteIndex": 8,
       "revealed": false,
       "revealedAt": null
     }
