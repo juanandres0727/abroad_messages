@@ -35,8 +35,7 @@
         </div>
         <div class="note" id="noteText" style="display:none"></div>
         <div class="today-actions">
-          <button id="checkNowBtn" class="primary pill sm">Ver Nota</button>
-          <button class="ghost pill sm" id="copyBtn">Copiar nota</button>
+<button class="ghost pill sm" id="copyBtn">Copiar nota</button>
         </div>
         <div class="confetti" id="confetti"></div>
         <div class="hearts" id="hearts" aria-hidden="true"></div>
@@ -58,7 +57,6 @@
       countdown: document.getElementById('countdown'),
       revealTimeDisplay: document.getElementById('revealTimeDisplay'),
       noteText: document.getElementById('noteText'),
-      checkNowBtn: document.getElementById('checkNowBtn'),
       copyBtn: document.getElementById('copyBtn'),
       resetBtn: document.getElementById('resetBtn'),
       confetti: document.getElementById('confetti'),
@@ -187,25 +185,14 @@
     }
 
     // Events
-    els.checkNowBtn.addEventListener('click', ()=>{ if(!revealIfDue()){ tickCountdown(); }});
-    els.copyBtn.addEventListener('click', copyNote);
+els.copyBtn.addEventListener('click', copyNote);
     els.resetBtn.addEventListener('click', resetAll);
 
     // Add micro-icon SVGs to action buttons (if not present)
-    (function decorateActionButtons(){
-      const chk = document.getElementById('checkNowBtn');
-      if(chk && !chk.querySelector('svg')){
-        chk.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14l-5-5 1.4-1.4L11 13.2l6.6-6.6L19 8l-8 8z"/></svg>');
-      }
-      const cp = document.getElementById('copyBtn');
-      if(cp && !cp.querySelector('svg')){
-        cp.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>');
-      }
-    })();
 
     // Init
     autoLoadScheduleFromJSON().then(()=>{ revealIfDue(); });
-    (function loop(){ tickCountdown(); setTimeout(loop, 1000); })();
-  </script>
+    (function loop(){ revealIfDue(); setTimeout(loop, 1000); })();
+</script>
 </body>
 </html>
