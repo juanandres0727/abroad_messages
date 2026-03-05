@@ -2,10 +2,10 @@
   "settings": {
     "partnerName": "Mi Amor, Mi Niña",
     "partnerTZ": "America/New_York",
-    "revealHour": 10,
+    "revealHour": 6,
     "revealMinute": 0,
-    "startDateISO": "2026-02-02",
-    "numDays": 28,
+    "startDateISO": "2026-03-05",
+    "numDays": 16,
     "frequency": "daily",
     "weekdays": [
       1,
@@ -16,246 +16,133 @@
     ]
   },
   "notes": [
-    "1. Hoy te mando muy buenas energías y sonríe mucho.",
-    "2. Mi amor por ti solo crece aun mas todos los días.",
-    "3. Recuerda que aunque no estemos juntos fisicamente, nunca mas vas a estar solita, siempre te voy a acompañar.",
-    "4. Somos el mejor equipo y una pareja que todos envidian. Sabes por que? Mañana te lo dire !",
-    "5. Somos una pareja que todos envidian por que somos un equipo, donde confiamos en el otro y trabajamos juntos y tenemos el amor mas grande que puede existir.",
-    "6. No sabes cuanto te extraño todos los días, te quiero ver ya.",
-    "7. Tu eres una mujer increíble, noble, honesta, con valores, linda, eres perfecta y lo tienes todo.",
-    "8. Ya quiero verte mi vida, el tiempo se esta pasando super rápido ! Ya casiiii !",
-    "9. Esto es un proceso y vamos super bien, cada día mejoramos y avanzamos hacia el futuro que queremos, tu me motivas a luchar cada dia.",
-    "10. Quiero una vida contigo, viajar contigo, vivir contigo, casarme contigo y luego tener hijos contigo.",
-    "11. Te extrañooo demasiadoo, pero se que ya pronto nos vamos a ver!",
-    "12. Mi amoooor llegue a Colombia, cada vez estoy mas cerca de verte y tocarte! Que felicidad ! 😁",
-    "13. Recuerda que soy tu mejor amigo, novio, esposo. Así que no dudes en decirme como estas, siempre tendré tiempo para escucharte.",
-    "14. Mira lo lejos que hemos llegado y nada nos va a separar, hemos pasado las pruebas mas difíciles.",
-    "15. Gracias por amarme y por ser esa niña tierna y linda conmigo, me haces feliz todos los días.",
-    "16. Espero con ansias volver a verte, ver tus ojitos lindos en persona y esa sonrisa que me motiva todos los días.",
-    "17. Gracias por resistir conmigo y por estar a mi lado, eres mi mundo! 🌎❤️‍🔥",
-    "18. Nuestro primer viaje de muchos que faltan en nuestra vida inicia mañana , que emocioooon !",
-    "19. Holaaaa mi amoooor, estamos juntos otra vez! Te amoooo ❤️‍🔥La distancia solo es un recordatorio de lo mucho que valdrá la pena cuando pueda abrazarte otra vez.",
-    "No importa cuántos kilómetros haya entre nosotros, sigues siendo mi lugar favorito.",
-    "Nuestra relación me enseña que el amor no depende de la cercanía, sino de la conexión.",
-    "Lo que estamos construyendo es fuerte, paciente y real. Y eso me motiva todos los días.",
-    "La distancia no nos debilita, nos entrena para un amor más grande.",
-    "Cada día lejos es un día más cerca de volver a vernos.",
-    "Hoy me hiciste falta, pero también me hiciste sonreír al recordarte.",
-    "Gracias por existir.",
-    "Eres mi persona favorita, incluso a kilómetros de distancia.",
-    "Un día menos para volver a verte.",
-    "Amo ver tu sonrisa todos los dias.",
-    "No sabes cuanto te amo, es imposible describirlo.",
-    "Eres perfecta en todos los sentidos, tu personalidad, tu cuerpo, todo !",
-    "Mi amor confío en ti y en lo que estamos construyendo.",
-    "Mi vida eres mi mundo entero y quiero construir una vida contigo.",
-    "Mi niña te quieres casar conmigo?",
-    "Ten paciencia mi amor que vamos a salir adelante y vamos a tener el futuro que tanto queremos.",
-    "Te extraño de todas las maneras posibles y lo hago cada segundo del dia.",
-    "Mi amor confío en ti y en nosotros.",
-    "Mi amo te lo quiero meter tan duro que llores y me digas que te duele demasiado.",
-    "Yo se que la distancia es difícil pero nuestro amor es tan fuerte que vamos a salir adelante.",
-    "La distancia es dura pero esto no es eterno, tiene un final.",
-    "Soy todo tuyo, mi corazón, mi pipí es tuyo, soy completamente tuyo.",
-    "Estoy demasiado enamorado de ti, me tienes perdido en todo de ti.",
-    "Olvidemos el pasado y construyamos el mejor futuro, que todos nos envidien.",
-    "Te amo infinitamente. ❤️‍🔥",
-    "Quiero estar a tu lado toda la vida. No hay nadie mas. Solo tu"
+    "1. Somos el mejor equipo y una pareja que todos envidian. Sabes por que? Mañana te lo dire !",
+    "2. Somos una pareja que todos envidian por que somos un equipo, donde confiamos en el otro y trabajamos juntos y tenemos el amor mas grande que puede existir.",
+    "3. No sabes cuanto te extraño todos los días, te quiero ver ya.",
+    "4. Tu eres una mujer increíble, noble, honesta, con valores, linda, eres perfecta y lo tienes todo.",
+    "5. Ya quiero verte mi vida, el tiempo se esta pasando super rápido ! Ya casiiii !",
+    "6. Esto es un proceso y vamos super bien, cada día mejoramos y avanzamos hacia el futuro que queremos, tu me motivas a luchar cada dia.",
+    "7. Quiero una vida contigo, viajar contigo, vivir contigo, casarme contigo y luego tener hijos contigo.",
+    "8. Te extrañooo demasiadoo, pero se que ya pronto nos vamos a ver!",
+    "9. Mi amoooor llegue a Colombia, cada vez estoy mas cerca de verte y tocarte! Que felicidad ! 😁 Ya mañana te veoooo shiiii ! Toy felizzz !",
+    "10. Recuerda que soy tu mejor amigo, novio, esposo. Así que no dudes en decirme como estas, siempre tendré tiempo para escucharte.",
+    "11. Mira lo lejos que hemos llegado y nada nos va a separar, hemos pasado las pruebas mas difíciles.",
+    "12. Gracias por amarme y por ser esa niña tierna y linda conmigo, me haces feliz todos los días.",
+    "13. Espero con ansias volver a verte, ver tus ojitos lindos en persona y esa sonrisa que me motiva todos los días.",
+    "14. Gracias por resistir conmigo y por estar a mi lado, eres mi mundo! 🌎❤️‍🔥",
+    "15. Nuestro primer viaje de muchos que faltan en nuestra vida inicia mañana , que emocioooon !",
+    "16. Holaaaa mi amoooor, estamos juntos otra vez! Te amoooo ❤️‍🔥La distancia solo es un recordatorio de lo mucho que valdrá la pena cuando pueda abrazarte otra vez."
   ],
   "schedule": [
     {
       "n": 1,
-      "dateISO": "2026-02-02",
+      "dateISO": "2026-03-05",
       "noteIndex": 0,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 2,
-      "dateISO": "2026-02-03",
+      "dateISO": "2026-03-06",
       "noteIndex": 1,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 3,
-      "dateISO": "2026-02-04",
+      "dateISO": "2026-03-07",
       "noteIndex": 2,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 4,
-      "dateISO": "2026-02-05",
+      "dateISO": "2026-03-08",
       "noteIndex": 3,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 5,
-      "dateISO": "2026-02-06",
+      "dateISO": "2026-03-09",
       "noteIndex": 4,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 6,
-      "dateISO": "2026-02-07",
+      "dateISO": "2026-03-10",
       "noteIndex": 5,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 7,
-      "dateISO": "2026-02-08",
+      "dateISO": "2026-03-11",
       "noteIndex": 6,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 8,
-      "dateISO": "2026-02-09",
+      "dateISO": "2026-03-12",
       "noteIndex": 7,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 9,
-      "dateISO": "2026-02-10",
+      "dateISO": "2026-03-13",
       "noteIndex": 8,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 10,
-      "dateISO": "2026-02-11",
+      "dateISO": "2026-03-14",
       "noteIndex": 9,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 11,
-      "dateISO": "2026-02-12",
+      "dateISO": "2026-03-15",
       "noteIndex": 10,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 12,
-      "dateISO": "2026-02-13",
+      "dateISO": "2026-03-16",
       "noteIndex": 11,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 13,
-      "dateISO": "2026-02-14",
+      "dateISO": "2026-03-17",
       "noteIndex": 12,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 14,
-      "dateISO": "2026-02-15",
+      "dateISO": "2026-03-18",
       "noteIndex": 13,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 15,
-      "dateISO": "2026-02-16",
+      "dateISO": "2026-03-19",
       "noteIndex": 14,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 16,
-      "dateISO": "2026-02-17",
+      "dateISO": "2026-03-20",
       "noteIndex": 15,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 17,
-      "dateISO": "2026-02-18",
-      "noteIndex": 16,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 18,
-      "dateISO": "2026-02-19",
-      "noteIndex": 17,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 19,
-      "dateISO": "2026-02-20",
-      "noteIndex": 18,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 20,
-      "dateISO": "2026-02-21",
-      "noteIndex": 19,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 21,
-      "dateISO": "2026-02-22",
-      "noteIndex": 20,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 22,
-      "dateISO": "2026-02-23",
-      "noteIndex": 21,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 23,
-      "dateISO": "2026-02-24",
-      "noteIndex": 22,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 24,
-      "dateISO": "2026-02-25",
-      "noteIndex": 23,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 25,
-      "dateISO": "2026-02-26",
-      "noteIndex": 24,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 26,
-      "dateISO": "2026-02-27",
-      "noteIndex": 25,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 27,
-      "dateISO": "2026-02-28",
-      "noteIndex": 26,
-      "revealed": false,
-      "revealedAt": null
-    },
-    {
-      "n": 28,
-      "dateISO": "2026-03-01",
-      "noteIndex": 27,
       "revealed": false,
       "revealedAt": null
     }

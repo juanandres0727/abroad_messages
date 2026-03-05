@@ -33,9 +33,9 @@
         <div class="time-panel" id="countdown" aria-live="polite">
           <div class="reveal-pill" id="revealTimeDisplay">Revelación —</div>
         </div>
-        <div class="note" id="noteText" style="display:none"></div>
+        <div class="note" id="noteText"></div>
         <div class="today-actions">
-<button class="ghost pill sm" id="copyBtn">Copiar nota</button>
+          <button class="ghost pill sm" id="copyBtn">Copiar nota</button>
         </div>
         <div class="confetti" id="confetti"></div>
         <div class="hearts" id="hearts" aria-hidden="true"></div>
@@ -48,7 +48,7 @@
 
   <script>
     const { DateTime } = luxon;
-    const STORAGE_KEY = 'surpriseScheduler_v1';
+    const STORAGE_KEY = 'surpriseScheduler_v2'; // MATCHED TO INDEX.HTML
 
     // DOM
     const els = {
@@ -67,59 +67,122 @@
     const load = () => { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || null; } catch { return null; } };
 
     // Showers
-    function showToday(entry, s){
-      const text = s.notes[entry.noteIndex];
-      els.noteText.textContent = text; els.noteText.style.display='block';
-      els.todayState.textContent = `¡Revelado para ${s.settings.partnerName || 'ti'}!`;
-      els.countdown.classList.add('revealed');
-      els.revealTimeDisplay.textContent = `Revelado · ${DateTime.fromISO(entry.revealedAt).toFormat('HH:mm')}`;
-      els.noteText.classList.add('revealed-pop');
+    function showNote(entry, s, opts = {}){
+      const text = (s.notes && s.notes[entry.noteIndex] != null) ? s.notes[entry.noteIndex] : '';
+      els.noteText.textContent = text;
+      els.noteText.style.display = 'block';
+
+      const name = s.settings.partnerName || 'ti';
+      if (opts.revealed){
+        els.todayState.textContent = `¡Revelado para ${name}!`;
+        if (entry.revealedAt){
+          els.revealTimeDisplay.textContent = `Revelado · ${DateTime.fromISO(entry.revealedAt).toFormat('HH:mm')}`;
+        } else {
+          els.revealTimeDisplay.textContent = `Revelado`;
+        }
+        els.countdown.classList.add('revealed');
+        els.noteText.classList.add('revealed-pop');
+      } else {
+        els.todayState.textContent = `Para ${name} 💌`;
+        showCountdownPill(s);
+        els.countdown.classList.remove('revealed');
+      }
     }
 
-    function showCountdown(s){
+    function showCountdownPill(s){
       const now = DateTime.now().setZone(s.settings.partnerTZ);
       const todayTarget = now.set({hour:s.settings.revealHour, minute:s.settings.revealMinute, second:0, millisecond:0});
       const target = (now > todayTarget) ? todayTarget.plus({days:1}) : todayTarget;
       const diff = target.diff(now, ['hours','minutes','seconds']).toObject();
-      // update reveal pill with remaining time
       const hh = String(Math.floor(diff.hours||0)).padStart(2,'0');
       const mm = String(Math.floor(diff.minutes||0)).padStart(2,'0');
       const ss = String(Math.floor(diff.seconds||0)).padStart(2,'0');
       els.revealTimeDisplay.textContent = `En ${hh}:${mm}:${ss} — Revela ${target.toFormat('HH:mm')}`;
-      els.countdown.classList.remove('revealed');
-      els.noteText.style.display='none';
+    }
+
+    // Schedule helpers
+    function ensureScheduleCovers(s, dateISO){
+      if (!s || !s.schedule || !Array.isArray(s.schedule) || s.schedule.length === 0) return null;
+
+      let entry = s.schedule.find(e => e.dateISO === dateISO);
+      if (entry) return entry;
+
+      const zone = s.settings.partnerTZ || 'UTC';
+      let last = s.schedule[s.schedule.length - 1];
+      let d = DateTime.fromISO(last.dateISO, {zone}).startOf('day');
+      const target = DateTime.fromISO(dateISO, {zone}).startOf('day');
+
+      if (target < DateTime.fromISO(s.schedule[0].dateISO, {zone}).startOf('day')) {
+        return s.schedule[0];
+      }
+
+      let n = last.n || s.schedule.length;
+      let nextNoteIndex = (typeof last.noteIndex === 'number') ? last.noteIndex + 1 : 0;
+      const notesLen = Array.isArray(s.notes) ? s.notes.length : 0;
+
+      while (d < target){
+        d = d.plus({days:1});
+        n += 1;
+        const noteIndex = notesLen ? (nextNoteIndex % notesLen) : 0;
+        nextNoteIndex += 1;
+
+        const newEntry = {
+          n,
+          dateISO: d.toISODate(),
+          noteIndex,
+          revealed: false,
+          revealedAt: null
+        };
+        s.schedule.push(newEntry);
+        entry = newEntry;
+      }
+      save(s);
+      return entry;
     }
 
     // Logic
     function tickCountdown(){
-      const s = load(); if(!s){ els.todayState.textContent = 'Esperando el horario…'; return; }
+      const s = load();
+      if(!s){ els.todayState.textContent = 'Esperando el horario…'; return; }
+
       const now = DateTime.now().setZone(s.settings.partnerTZ);
       const today = now.startOf('day').toISODate();
-      const entry = s.schedule.find(e => e.dateISO === today);
-      if (entry && entry.revealed) { showToday(entry, s); } else { showCountdown(s); }
+      const entry = ensureScheduleCovers(s, today);
+      if (!entry) return;
+
+      if (entry.revealed) {
+        showNote(entry, s, {revealed:true});
+      } else {
+        showNote(entry, s, {revealed:false});
+      }
     }
 
     function revealIfDue(){
       const s = load(); if(!s) return false;
+
       const now = DateTime.now().setZone(s.settings.partnerTZ);
       const today = now.startOf('day').toISODate();
-      const entry = s.schedule.find(e=>e.dateISO === today);
-      const due = entry && !entry.revealed &&
-                  now >= DateTime.fromISO(entry.dateISO, {zone:s.settings.partnerTZ})
-                          .set({hour:s.settings.revealHour, minute:s.settings.revealMinute, second:0, millisecond:0});
+      const entry = ensureScheduleCovers(s, today);
+      if(!entry) return false;
+
+      const dueTime = DateTime.fromISO(entry.dateISO, {zone:s.settings.partnerTZ})
+        .set({hour:s.settings.revealHour, minute:s.settings.revealMinute, second:0, millisecond:0});
+
+      const due = (!entry.revealed && now >= dueTime);
+
       if(due){
-        entry.revealed = true; entry.revealedAt = now.toISO();
+        entry.revealed = true;
+        entry.revealedAt = now.toISO();
         save(s);
-        showToday(entry, s);
+        showNote(entry, s, {revealed:true});
         fireConfetti(); fireHearts();
         return true;
       }
-      if(entry && entry.revealed){ showToday(entry, s); return true; }
-      showCountdown(s);
-      return false;
+
+      showNote(entry, s, {revealed: entry.revealed});
+      return true;
     }
 
-    // Auto-load schedule.json on first visit
     async function autoLoadScheduleFromJSON(){
       const existing = load(); if (existing) return;
       try {
@@ -150,7 +213,6 @@
       setTimeout(()=>{ cont.innerHTML=''; }, 5000);
     }
 
-    // Floating hearts for reveals
     function fireHearts(){
       const cont = document.getElementById('hearts'); if(!cont) return;
       const colors = ['#ff6b9d','#ff92b2','#ff5fa8','#ffd1d9'];
@@ -185,14 +247,20 @@
     }
 
     // Events
-els.copyBtn.addEventListener('click', copyNote);
+    els.copyBtn.addEventListener('click', copyNote);
     els.resetBtn.addEventListener('click', resetAll);
 
-    // Add micro-icon SVGs to action buttons (if not present)
+    // Add micro-icon SVGs
+    (function decorateActionButtons(){
+      const cp = document.getElementById('copyBtn');
+      if(cp && !cp.querySelector('svg')){
+        cp.insertAdjacentHTML('afterbegin', '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>');
+      }
+    })();
 
     // Init
     autoLoadScheduleFromJSON().then(()=>{ revealIfDue(); });
-    (function loop(){ revealIfDue(); setTimeout(loop, 1000); })();
-</script>
+    (function loop(){ tickCountdown(); setTimeout(loop, 1000); })();
+  </script>
 </body>
 </html>
