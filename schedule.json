@@ -4,8 +4,8 @@
     "partnerTZ": "America/New_York",
     "revealHour": 6,
     "revealMinute": 0,
-    "startDateISO": "2026-03-05",
-    "numDays": 16,
+    "startDateISO": "2026-04-06",
+    "numDays": 30,
     "frequency": "daily",
     "weekdays": [
       1,
@@ -16,133 +16,245 @@
     ]
   },
   "notes": [
-    "1. Somos el mejor equipo y una pareja que todos envidian. Sabes por que? Mañana te lo dire !",
-    "2. Somos una pareja que todos envidian por que somos un equipo, donde confiamos en el otro y trabajamos juntos y tenemos el amor mas grande que puede existir.",
-    "3. No sabes cuanto te extraño todos los días, te quiero ver ya.",
-    "4. Tu eres una mujer increíble, noble, honesta, con valores, linda, eres perfecta y lo tienes todo.",
-    "5. Ya quiero verte mi vida, el tiempo se esta pasando super rápido ! Ya casiiii !",
-    "6. Esto es un proceso y vamos super bien, cada día mejoramos y avanzamos hacia el futuro que queremos, tu me motivas a luchar cada dia.",
-    "7. Quiero una vida contigo, viajar contigo, vivir contigo, casarme contigo y luego tener hijos contigo.",
-    "8. Te extrañooo demasiadoo, pero se que ya pronto nos vamos a ver!",
-    "9. Mi amoooor llegue a Colombia, cada vez estoy mas cerca de verte y tocarte! Que felicidad ! 😁 Ya mañana te veoooo shiiii ! Toy felizzz !",
-    "10. Recuerda que soy tu mejor amigo, novio, esposo. Así que no dudes en decirme como estas, siempre tendré tiempo para escucharte.",
-    "11. Mira lo lejos que hemos llegado y nada nos va a separar, hemos pasado las pruebas mas difíciles.",
-    "12. Gracias por amarme y por ser esa niña tierna y linda conmigo, me haces feliz todos los días.",
-    "13. Espero con ansias volver a verte, ver tus ojitos lindos en persona y esa sonrisa que me motiva todos los días.",
-    "14. Gracias por resistir conmigo y por estar a mi lado, eres mi mundo! 🌎❤️‍🔥",
-    "15. Nuestro primer viaje de muchos que faltan en nuestra vida inicia mañana , que emocioooon !",
-    "16. Holaaaa mi amoooor, estamos juntos otra vez! Te amoooo ❤️‍🔥La distancia solo es un recordatorio de lo mucho que valdrá la pena cuando pueda abrazarte otra vez."
+    "1. Te amo como no tienes idea, eres mi mundo entero!",
+    "2. Prometo luchar por ti hasta el ultimo día.",
+    "3. Eres una mujer maravillosa e increíble y mereces lo mejor en este mundo.",
+    "4. Gracias por sacar ese niño interior en mi y hacerlo muy feliz.",
+    "5. Te lo dije desde un inicio cuando esto empezó, planeo casarme contigo y tener hijos contigo.",
+    "6. Te extraño como no tienes idea mi Laury",
+    "7. Extraño tus videitos, son los mejores, extraño tus besitos",
+    "8. Extraño ser tu hombre, tu novio",
+    "9. Extraño presumirte por ser la mejor novia del mundo.",
+    "10. Te hago un hijo si o si. Nos voy a cumplir ese sueño que ambos tenemos.",
+    "1`1. Nunca me olvides mi princesa si ? Yo jamas lo hare.",
+    "12. Aquí estaré para ti siempre, independiente de lo que sea siempre estaré para escucharte.",
+    "13. No paro de ver nuestro álbum, amo ver nuestra conexión y lo felices que estábamos.",
+    "14. Extraño tus ojitos, tu sonrisa, tus cachetes, tus pucheritos",
+    "15. Extraño verte dormir mi vida, amo verte dormir",
+    "16. Puedes cumplir tu mensaje donde dices \"Usted algún día vuelve a ser mio\" ?",
+    "17. Nos podemos escapar juntos a algún lugar y vivir todo lo que soñamos.",
+    "18. Extraño tus celos hacia mi y ser solo tuyo",
+    "19. Quiero un hogar contigo, construir una familia, casarme contigo y tener 3 hijos.",
+    "20. Extraño ser un equipo junto a ti.",
+    "21. No olvides revisar los mensajes destacados, yo lo hago todos los días y amo cada uno de tus mensajes.",
+    "22. Eres la mujer de mi vida y la mujer que necesito a mi lado.",
+    "23. Extraño llamarte mi amor y que tu me digas mi amor",
+    "24. Prometo todo mi Laury, no pares de escuchar esas playlists.",
+    "25. Tengo ganas de llamarte y hablar contigo",
+    "26. Extraño las llamadas y dormir contigo y levantarme y verte. Ser tu lo primero que vea al levantarme",
+    "27. Quiero ser tu hombre toda la vida y que me hagas tuyo cada dia de nuestra vida",
+    "28. Recuerda lo fuerte que eres, lo inteligente que eres, lo increíble que eres. No olvides sonreír.",
+    "29. Se que eres muy penosa y si me necesitas y quieres hablar y no sabes como hacerlo solo envíame un punto \".\" y yo te escribiré o te llamare, siempre tendre tiempo para ti.",
+    "30. Siempre seras mi niña, mi mujer, mi novia, mi esposa, el amor de mi vida."
   ],
   "schedule": [
     {
       "n": 1,
-      "dateISO": "2026-03-05",
+      "dateISO": "2026-04-06",
       "noteIndex": 0,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 2,
-      "dateISO": "2026-03-06",
+      "dateISO": "2026-04-07",
       "noteIndex": 1,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 3,
-      "dateISO": "2026-03-07",
+      "dateISO": "2026-04-08",
       "noteIndex": 2,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 4,
-      "dateISO": "2026-03-08",
+      "dateISO": "2026-04-09",
       "noteIndex": 3,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 5,
-      "dateISO": "2026-03-09",
+      "dateISO": "2026-04-10",
       "noteIndex": 4,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 6,
-      "dateISO": "2026-03-10",
+      "dateISO": "2026-04-11",
       "noteIndex": 5,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 7,
-      "dateISO": "2026-03-11",
+      "dateISO": "2026-04-12",
       "noteIndex": 6,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 8,
-      "dateISO": "2026-03-12",
+      "dateISO": "2026-04-13",
       "noteIndex": 7,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 9,
-      "dateISO": "2026-03-13",
+      "dateISO": "2026-04-14",
       "noteIndex": 8,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 10,
-      "dateISO": "2026-03-14",
+      "dateISO": "2026-04-15",
       "noteIndex": 9,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 11,
-      "dateISO": "2026-03-15",
+      "dateISO": "2026-04-16",
       "noteIndex": 10,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 12,
-      "dateISO": "2026-03-16",
+      "dateISO": "2026-04-17",
       "noteIndex": 11,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 13,
-      "dateISO": "2026-03-17",
+      "dateISO": "2026-04-18",
       "noteIndex": 12,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 14,
-      "dateISO": "2026-03-18",
+      "dateISO": "2026-04-19",
       "noteIndex": 13,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 15,
-      "dateISO": "2026-03-19",
+      "dateISO": "2026-04-20",
       "noteIndex": 14,
       "revealed": false,
       "revealedAt": null
     },
     {
       "n": 16,
-      "dateISO": "2026-03-20",
+      "dateISO": "2026-04-21",
       "noteIndex": 15,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 17,
+      "dateISO": "2026-04-22",
+      "noteIndex": 16,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 18,
+      "dateISO": "2026-04-23",
+      "noteIndex": 17,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 19,
+      "dateISO": "2026-04-24",
+      "noteIndex": 18,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 20,
+      "dateISO": "2026-04-25",
+      "noteIndex": 19,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 21,
+      "dateISO": "2026-04-26",
+      "noteIndex": 20,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 22,
+      "dateISO": "2026-04-27",
+      "noteIndex": 21,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 23,
+      "dateISO": "2026-04-28",
+      "noteIndex": 22,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 24,
+      "dateISO": "2026-04-29",
+      "noteIndex": 23,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 25,
+      "dateISO": "2026-04-30",
+      "noteIndex": 24,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 26,
+      "dateISO": "2026-05-01",
+      "noteIndex": 25,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 27,
+      "dateISO": "2026-05-02",
+      "noteIndex": 26,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 28,
+      "dateISO": "2026-05-03",
+      "noteIndex": 27,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 29,
+      "dateISO": "2026-05-04",
+      "noteIndex": 28,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 30,
+      "dateISO": "2026-05-05",
+      "noteIndex": 29,
       "revealed": false,
       "revealedAt": null
     }

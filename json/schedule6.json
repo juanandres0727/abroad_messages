@@ -1,0 +1,150 @@
+{
+  "settings": {
+    "partnerName": "Mi Amor, Mi Niña",
+    "partnerTZ": "America/New_York",
+    "revealHour": 6,
+    "revealMinute": 0,
+    "startDateISO": "2026-03-05",
+    "numDays": 16,
+    "frequency": "daily",
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "notes": [
+    "1. Somos el mejor equipo y una pareja que todos envidian. Sabes por que? Mañana te lo dire !",
+    "2. Somos una pareja que todos envidian por que somos un equipo, donde confiamos en el otro y trabajamos juntos y tenemos el amor mas grande que puede existir.",
+    "3. No sabes cuanto te extraño todos los días, te quiero ver ya.",
+    "4. Tu eres una mujer increíble, noble, honesta, con valores, linda, eres perfecta y lo tienes todo.",
+    "5. Ya quiero verte mi vida, el tiempo se esta pasando super rápido ! Ya casiiii !",
+    "6. Esto es un proceso y vamos super bien, cada día mejoramos y avanzamos hacia el futuro que queremos, tu me motivas a luchar cada dia.",
+    "7. Quiero una vida contigo, viajar contigo, vivir contigo, casarme contigo y luego tener hijos contigo.",
+    "8. Te extrañooo demasiadoo, pero se que ya pronto nos vamos a ver!",
+    "9. Mi amoooor llegue a Colombia, cada vez estoy mas cerca de verte y tocarte! Que felicidad ! 😁 Ya mañana te veoooo shiiii ! Toy felizzz !",
+    "10. Recuerda que soy tu mejor amigo, novio, esposo. Así que no dudes en decirme como estas, siempre tendré tiempo para escucharte.",
+    "11. Mira lo lejos que hemos llegado y nada nos va a separar, hemos pasado las pruebas mas difíciles.",
+    "12. Gracias por amarme y por ser esa niña tierna y linda conmigo, me haces feliz todos los días.",
+    "13. Espero con ansias volver a verte, ver tus ojitos lindos en persona y esa sonrisa que me motiva todos los días.",
+    "14. Gracias por resistir conmigo y por estar a mi lado, eres mi mundo! 🌎❤️‍🔥",
+    "15. Nuestro primer viaje de muchos que faltan en nuestra vida inicia mañana , que emocioooon !",
+    "16. Holaaaa mi amoooor, estamos juntos otra vez! Te amoooo ❤️‍🔥La distancia solo es un recordatorio de lo mucho que valdrá la pena cuando pueda abrazarte otra vez."
+  ],
+  "schedule": [
+    {
+      "n": 1,
+      "dateISO": "2026-03-05",
+      "noteIndex": 0,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 2,
+      "dateISO": "2026-03-06",
+      "noteIndex": 1,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 3,
+      "dateISO": "2026-03-07",
+      "noteIndex": 2,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 4,
+      "dateISO": "2026-03-08",
+      "noteIndex": 3,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 5,
+      "dateISO": "2026-03-09",
+      "noteIndex": 4,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 6,
+      "dateISO": "2026-03-10",
+      "noteIndex": 5,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 7,
+      "dateISO": "2026-03-11",
+      "noteIndex": 6,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 8,
+      "dateISO": "2026-03-12",
+      "noteIndex": 7,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 9,
+      "dateISO": "2026-03-13",
+      "noteIndex": 8,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 10,
+      "dateISO": "2026-03-14",
+      "noteIndex": 9,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 11,
+      "dateISO": "2026-03-15",
+      "noteIndex": 10,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 12,
+      "dateISO": "2026-03-16",
+      "noteIndex": 11,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 13,
+      "dateISO": "2026-03-17",
+      "noteIndex": 12,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 14,
+      "dateISO": "2026-03-18",
+      "noteIndex": 13,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 15,
+      "dateISO": "2026-03-19",
+      "noteIndex": 14,
+      "revealed": false,
+      "revealedAt": null
+    },
+    {
+      "n": 16,
+      "dateISO": "2026-03-20",
+      "noteIndex": 15,
+      "revealed": false,
+      "revealedAt": null
+    }
+  ]
+}
